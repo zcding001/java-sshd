@@ -7,19 +7,68 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>java-sshd</name>
-  <url>http://maven.apache.org</url>
+  <name>aop-log</name>
+	<description>java connection sshd</description>
+	<url>https://github.com/surpassE/java-sshd</url>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<scm>
+		<connection>scm:git:git@github.com:surpassE/java-sshd.git</connection>
+		<developerConnection>scm:git:git@github.com:surpassE/java-sshd.git</developerConnection>
+		<url>git@github.com:surpassE/java-sshd.git</url>
+	</scm>
+	
+	<developers>
+		<developer>
+			<id>surpass1990</id>
+			<name>sirding</name>
+			<email>iamdzc@sina.com</email>
+			<url>https://github.com/surpassE</url>
+		</developer>
+	</developers>
+<!-- 
+	<id>UK</id>
+      <name>UK Central</name>
+      <url>http://uk.maven.org/maven2</url>
+      <mirrorOf>central</mirrorOf> -->
+	<dependencies>
+		<!-- http://mvnrepository.com/artifact/junit/junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.10</version>
+			<scope>test</scope>
+		</dependency>
 
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
+		<!-- http://mvnrepository.com/artifact/log4j/log4j -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.apache.sshd/sshd-core -->
+<dependency>
+    <groupId>org.apache.sshd</groupId>
+    <artifactId>sshd-core</artifactId>
+    <version>1.2.0</version>
+</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/com.jcraft/jsch -->
+<dependency>
+    <groupId>com.jcraft</groupId>
+    <artifactId>jsch</artifactId>
+    <version>0.1.53</version>
+</dependency>
+		
+	</dependencies>
+
+	<build>
+		<!-- Using non-standard directories, because this started out as an ant 
+			project initially and we don't want to shuffle around directories right now -->
+		<sourceDirectory>src</sourceDirectory>
+		<testSourceDirectory>test</testSourceDirectory>
+	</build>
 </project>
