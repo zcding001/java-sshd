@@ -92,7 +92,7 @@ public class AutomateService {
 	 * @author zc.ding
 	 */
 	public List<FileInfo> getOptionFileInfo(String projectPath, String commitId) {
-		List<FileInfo> list = new ArrayList<>();
+		List<FileInfo> list = new ArrayList<FileInfo>();
 		String cmd = "git -C " + projectPath + " " + gitDiff;
 		if(commitId != null && commitId.length() > 0){
 			String[] arr = commitId.split(",");

@@ -4,11 +4,13 @@ import java.io.File;
 import java.util.Properties;
  
 
+
 import com.jcraft.jsch.Channel;
 import com.jcraft.jsch.ChannelSftp;
 import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.JSchException;
 import com.jcraft.jsch.Session;
+import com.jcraft.jsch.SftpATTRS;
 
 /**
  * 连接sshd的工具类
@@ -16,13 +18,6 @@ import com.jcraft.jsch.Session;
  * @date 2016年7月7日
  */
 public class SftpUtil {
- 
-//    private static String host;//sftp服务器ip
-//    private static String userName;//用户名
-//    private static String password;//密码
-//    private static String privateKey;//密钥文件路径
-//    private static String passphrase;//密钥口令
-//    private static int port;//默认的sftp端口号是22
  
     /**
      * 
@@ -129,16 +124,53 @@ public class SftpUtil {
     public static void delete(String deleteFile, ChannelSftp sftp) throws Exception{
         sftp.rm(deleteFile);
     }
+    
+    /**
+     * 创建远程路径
+     * @param path
+     * @param sftp
+     * @throws Exception
+     * @author zc.ding
+     * @date 2016年7月7日
+     */
+    public static void mkdirPath(String path, ChannelSftp sftp) throws Exception{
+    	sftp.mkdir(path);
+    }
      
-    public static void disconnected(ChannelSftp sftp){
+    /**
+     * 销毁sftp连接
+     * @param sftp
+     * @throws Exception
+     * @author zc.ding
+     * @date 2016年7月7日
+     */
+    public static void disconnected(ChannelSftp sftp) throws Exception{
         if (sftp != null) {
-            try {
-                sftp.getSession().disconnect();
-            } catch (JSchException e) {
-                e.printStackTrace();
-            }
+            sftp.getSession().disconnect();
             sftp.disconnect();
             System.out.println("okok...");
         }
     }
+    
+    /**
+     * 判断指定的路径是否存在
+     * @param directory
+     * @param sftp
+     * @return
+     * @throws Exception
+     * @author zc.ding
+     * @date 2016年7月7日
+     */
+	public boolean isDirExist(String directory, ChannelSftp sftp) throws Exception {
+		boolean isDirExistFlag = false;
+		try {
+			SftpATTRS sftpATTRS = sftp.lstat(directory);
+			isDirExistFlag = sftpATTRS.isDir();
+		} catch (Exception e) {
+			if (e.getMessage().toLowerCase().equals("no such file")) {
+				isDirExistFlag = false;
+			}
+		}
+		return isDirExistFlag;
+	}
 }

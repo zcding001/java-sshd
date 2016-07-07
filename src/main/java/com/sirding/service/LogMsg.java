@@ -23,7 +23,7 @@ public class LogMsg {
 	
 	public static void showConfig(Config config){
 		logger.debug("==================应用配置信息=================");
-		logger.debug("tomca位置:\t" + config.getTomcatPath());
+		logger.debug("tomca位置:\t" + config.getLocalTomcatPath());
 		logger.debug("git项目位置：\t");
 		logger.debug("==================应用配置信息=================");
 	}		

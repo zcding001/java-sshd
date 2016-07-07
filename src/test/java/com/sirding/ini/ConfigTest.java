@@ -10,7 +10,6 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import com.sirding.model.Config;
-import com.sirding.model.FileInfo;
 import com.sirding.model.GlobalConfig;
 import com.sirding.singleton.IniTool;
 
@@ -47,7 +46,7 @@ public class ConfigTest {
 				return;
 			}
 			logger.debug("==================应用配置信息=================");
-			logger.debug("tomca位置:\t" + config.getTomcatPath());
+			logger.debug("tomca位置:\t" + config.getLocalTomcatPath());
 			logger.debug("git项目位置：\t");
 			logger.debug("==================应用配置信息=================");
 		} catch (Exception e) {

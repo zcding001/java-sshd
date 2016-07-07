@@ -11,8 +11,10 @@ import com.sirding.annotation.Option;
 public class Config {
 	@Option(isSection = true)
 	private String secName;
-	@Option(key = "tomcat_path")
-	private String tomcatPath;
+	@Option(key = "remote_tomcat_path")
+	private String remoteTomcatPath;
+	@Option(key = "local_tomcat_path")
+	private String localTomcatPath;
 	@Option(key = "project_path")
 	private String projectPath;
 	@Option(key = "commit_id")
@@ -23,6 +25,10 @@ public class Config {
 	private String date;
 	@Option(key = "bak_folder_name_suffix")
 	private String bakFolderNameSuffix;
+	@Option(key = "black_path_list")
+	private String blackPathList;
+	@Option(key = "black_key_pattern")
+	private String blackKeyPattern;
 	
 	public String getSecName() {
 		return secName;
@@ -30,11 +36,17 @@ public class Config {
 	public void setSecName(String secName) {
 		this.secName = secName;
 	}
-	public String getTomcatPath() {
-		return tomcatPath;
+	public String getRemoteTomcatPath() {
+		return remoteTomcatPath;
 	}
-	public void setTomcatPath(String tomcatPath) {
-		this.tomcatPath = tomcatPath;
+	public void setRemoteTomcatPath(String remoteTomcatPath) {
+		this.remoteTomcatPath = remoteTomcatPath;
+	}
+	public String getLocalTomcatPath() {
+		return localTomcatPath;
+	}
+	public void setLocalTomcatPath(String localTomcatPath) {
+		this.localTomcatPath = localTomcatPath;
 	}
 	public String getProjectPath() {
 		return projectPath;
@@ -65,5 +77,17 @@ public class Config {
 	}
 	public void setCommitId(String commitId) {
 		this.commitId = commitId;
+	}
+	public String getBlackPathList() {
+		return blackPathList;
+	}
+	public void setBlackPathList(String blackPathList) {
+		this.blackPathList = blackPathList;
+	}
+	public String getBlackKeyPattern() {
+		return blackKeyPattern;
+	}
+	public void setBlackKeyPattern(String blackKeyPattern) {
+		this.blackKeyPattern = blackKeyPattern;
 	}
 }

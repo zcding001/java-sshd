@@ -39,6 +39,12 @@ public class Automate {
 				
 			}
 			
+			String remoteTomcatPath = config.getRemoteTomcatPath();
+			String localTomcatPath = config.getLocalTomcatPath();
+			
+			
+			
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
