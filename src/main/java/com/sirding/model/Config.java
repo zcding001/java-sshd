@@ -1,4 +1,7 @@
 package com.sirding.model;
+
+import com.sirding.annotation.Option;
+
 /**
  * 
  * @author zc.ding
@@ -6,42 +9,21 @@ package com.sirding.model;
  *
  */
 public class Config {
-
-	private String ip;
-	private String port;
-	private String userName;
-	private String pwd;
+	@Option(isSection = true)
 	private String secName;
+	@Option(key = "tomcat_path")
 	private String tomcatPath;
-	private String gitPath;
+	@Option(key = "project_path")
+	private String projectPath;
+	@Option(key = "commit_id")
+	private String commitId;
+	@Option
 	private int index;
+	@Option
 	private String date;
+	@Option(key = "bak_folder_name_suffix")
 	private String bakFolderNameSuffix;
 	
-	public String getIp() {
-		return ip;
-	}
-	public void setIp(String ip) {
-		this.ip = ip;
-	}
-	public String getPort() {
-		return port;
-	}
-	public void setPort(String port) {
-		this.port = port;
-	}
-	public String getUserName() {
-		return userName;
-	}
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
-	public String getPwd() {
-		return pwd;
-	}
-	public void setPwd(String pwd) {
-		this.pwd = pwd;
-	}
 	public String getSecName() {
 		return secName;
 	}
@@ -54,11 +36,11 @@ public class Config {
 	public void setTomcatPath(String tomcatPath) {
 		this.tomcatPath = tomcatPath;
 	}
-	public String getGitPath() {
-		return gitPath;
+	public String getProjectPath() {
+		return projectPath;
 	}
-	public void setGitPath(String gitPath) {
-		this.gitPath = gitPath;
+	public void setProjectPath(String projectPath) {
+		this.projectPath = projectPath;
 	}
 	public int getIndex() {
 		return index;
@@ -77,5 +59,11 @@ public class Config {
 	}
 	public void setBakFolderNameSuffix(String bakFolderNameSuffix) {
 		this.bakFolderNameSuffix = bakFolderNameSuffix;
+	}
+	public String getCommitId() {
+		return commitId;
+	}
+	public void setCommitId(String commitId) {
+		this.commitId = commitId;
 	}
 }

@@ -1,0 +1,133 @@
+[DEBUG][2016-07-07 14:37:37,943][com.sirding.service.impl.SecServiceImpl]从【file:/C:/yrtz/project4ecplise/java-sshd/target/test-classes/config.ini】文件中加载配置信息
+[DEBUG][2016-07-07 14:38:59,489][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/project4ecplise/java-sshd/target/test-classes/config.ini】文件中加载配置信息
+[DEBUG][2016-07-07 14:38:59,513][com.sirding.ini.ConfigTest]192.168.8.1	22
+[DEBUG][2016-07-07 14:55:37,257][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/project4ecplise/java-sshd/target/test-classes/config.ini】文件中加载配置信息
+[DEBUG][2016-07-07 14:55:37,289][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/project4ecplise/java-sshd/target/test-classes/config.ini】文件中加载配置信息
+[DEBUG][2016-07-07 14:55:37,294][com.sirding.ini.ConfigTest]tomca_pathC:/yrtz/tools/TOMCAT/apache-tomcat-6.0.43/webapps/yrtz
+[DEBUG][2016-07-07 14:56:56,739][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/project4ecplise/java-sshd/target/test-classes/config.ini】文件中加载配置信息
+[DEBUG][2016-07-07 14:56:56,764][com.sirding.ini.ConfigTest]要执行的节点信息：tomcat1
+[DEBUG][2016-07-07 14:56:56,765][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/project4ecplise/java-sshd/target/test-classes/config.ini】文件中加载配置信息
+[DEBUG][2016-07-07 14:56:56,769][com.sirding.ini.ConfigTest]tomca_pathC:/yrtz/tools/TOMCAT/apache-tomcat-6.0.43/webapps/yrtz
+[DEBUG][2016-07-07 14:58:57,465][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/project4ecplise/java-sshd/target/test-classes/config.ini】文件中加载配置信息
+[DEBUG][2016-07-07 14:58:57,491][com.sirding.ini.ConfigTest]要应用的配置节点：tomcat1
+[DEBUG][2016-07-07 14:59:05,115][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/project4ecplise/java-sshd/target/test-classes/config.ini】文件中加载配置信息
+[DEBUG][2016-07-07 14:59:56,931][com.sirding.ini.ConfigTest]tomca_pathC:/yrtz/tools/TOMCAT/apache-tomcat-6.0.43/webapps/yrtz
+[DEBUG][2016-07-07 15:00:45,717][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/project4ecplise/java-sshd/target/test-classes/config.ini】文件中加载配置信息
+[DEBUG][2016-07-07 15:00:45,756][com.sirding.ini.ConfigTest]要应用的配置节点：tomcat1
+[DEBUG][2016-07-07 15:00:45,758][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/project4ecplise/java-sshd/target/test-classes/config.ini】文件中加载配置信息
+[DEBUG][2016-07-07 15:00:45,764][com.sirding.ini.ConfigTest]tomca_pathC:/yrtz/tools/TOMCAT/apache-tomcat-6.0.43/webapps/yrtz
+[DEBUG][2016-07-07 15:01:25,382][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/project4ecplise/java-sshd/target/test-classes/config.ini】文件中加载配置信息
+[DEBUG][2016-07-07 15:01:25,410][com.sirding.ini.ConfigTest]要应用的配置节点：tomcat1
+[DEBUG][2016-07-07 15:01:25,411][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/project4ecplise/java-sshd/target/test-classes/config.ini】文件中加载配置信息
+[DEBUG][2016-07-07 15:01:25,413][com.sirding.ini.ConfigTest]tomca_pathC:/yrtz/tools/TOMCAT/apache-tomcat-6.0.43/webapps/yrtz
+[DEBUG][2016-07-07 17:14:01,117][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-07 17:14:07,351][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-07 17:14:49,011][com.sirding.service.AutomateService]SSHD连接初始化失败
+[DEBUG][2016-07-07 17:17:18,736][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-07 17:17:20,312][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-07 17:18:36,306][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-07 17:18:36,332][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-07 17:18:38,698][com.sirding.service.AutomateService]执行的cmd命令:git -C C:\yrtz\test\automate\config.ini staus --short
+[DEBUG][2016-07-07 17:19:30,817][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-07 17:19:30,845][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-07 17:19:32,982][com.sirding.service.AutomateService]执行的cmd命令:git -C C:/yrtz/git/github/demo-web staus --short
+[DEBUG][2016-07-07 17:21:23,719][com.sirding.ini.ConfigTest]执行的cmd命令:git -C C:/yrtz/git/github/demo-web status --short
+[DEBUG][2016-07-07 17:24:52,852][com.sirding.ini.ConfigTest]执行的cmd命令:git -C C:/yrtz/git/github/demo-web status
+[DEBUG][2016-07-07 17:29:55,836][com.sirding.ini.ConfigTest]执行的cmd命令:cmd.exe /C git -C C:/yrtz/git/github/demo-web status
+[DEBUG][2016-07-07 17:31:15,788][com.sirding.ini.ConfigTest]执行的cmd命令:cmd.exe /C git -C C:/yrtz/git/github/demo-web status
+[DEBUG][2016-07-07 17:31:15,876][com.sirding.ini.ConfigTest]'git' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+[DEBUG][2016-07-07 17:31:15,876][com.sirding.ini.ConfigTest]�������ļ���
+[DEBUG][2016-07-07 17:32:28,599][com.sirding.ini.ConfigTest]执行的cmd命令:cmd.exe /C git -C C:/yrtz/git/github/demo-web status
+[DEBUG][2016-07-07 17:32:28,694][com.sirding.ini.ConfigTest]'git' 不是内部或外部命令，也不是可运行的程序
+[DEBUG][2016-07-07 17:32:28,695][com.sirding.ini.ConfigTest]或批处理文件。
+[DEBUG][2016-07-07 17:33:39,818][com.sirding.ini.ConfigTest]执行的cmd命令:[Ljava.lang.String;@3e332aff
+[DEBUG][2016-07-07 17:33:39,927][com.sirding.ini.ConfigTest]'git' 不是内部或外部命令，也不是可运行的程序
+[DEBUG][2016-07-07 17:33:39,928][com.sirding.ini.ConfigTest]或批处理文件。
+[DEBUG][2016-07-07 17:34:10,075][com.sirding.ini.ConfigTest]执行的cmd命令:[Ljava.lang.String;@114beb40
+[DEBUG][2016-07-07 17:34:10,157][com.sirding.ini.ConfigTest]Microsoft Windows [版本 10.0.10586]
+[DEBUG][2016-07-07 17:34:10,158][com.sirding.ini.ConfigTest](c) 2015 Microsoft Corporation。保留所有权利。
+[DEBUG][2016-07-07 17:34:10,158][com.sirding.ini.ConfigTest]
+[DEBUG][2016-07-07 17:34:20,530][com.sirding.ini.ConfigTest]执行的cmd命令:[Ljava.lang.String;@f41bf9f
+[DEBUG][2016-07-07 17:34:20,655][com.sirding.ini.ConfigTest]'git' 不是内部或外部命令，也不是可运行的程序
+[DEBUG][2016-07-07 17:34:20,655][com.sirding.ini.ConfigTest]或批处理文件。
+[DEBUG][2016-07-07 17:37:14,531][com.sirding.ini.ConfigTest]执行的cmd命令:[Ljava.lang.String;@3e332aff
+[DEBUG][2016-07-07 17:37:14,648][com.sirding.ini.ConfigTest]'git' 不是内部或外部命令，也不是可运行的程序
+[DEBUG][2016-07-07 17:37:14,648][com.sirding.ini.ConfigTest]或批处理文件。
+[DEBUG][2016-07-07 17:37:54,150][com.sirding.ini.ConfigTest]执行的cmd命令:[Ljava.lang.String;@3e332aff
+[DEBUG][2016-07-07 17:37:54,234][com.sirding.ini.ConfigTest]'C:/Program' 不是内部或外部命令，也不是可运行的程序
+[DEBUG][2016-07-07 17:37:54,235][com.sirding.ini.ConfigTest]或批处理文件。
+[DEBUG][2016-07-07 17:43:42,110][com.sirding.ini.ConfigTest]执行的cmd命令:[Ljava.lang.String;@258b678c
+[DEBUG][2016-07-07 17:43:42,267][com.sirding.ini.ConfigTest]'git' 不是内部或外部命令，也不是可运行的程序
+[DEBUG][2016-07-07 17:43:42,268][com.sirding.ini.ConfigTest]或批处理文件。
+[DEBUG][2016-07-07 17:45:20,370][com.sirding.ini.ConfigTest]执行的cmd命令:[Ljava.lang.String;@114beb40
+[DEBUG][2016-07-07 17:45:20,462][com.sirding.ini.ConfigTest]'git' 不是内部或外部命令，也不是可运行的程序
+[DEBUG][2016-07-07 17:45:20,463][com.sirding.ini.ConfigTest]或批处理文件。
+[DEBUG][2016-07-07 17:46:17,665][com.sirding.ini.ConfigTest]执行的cmd命令:[Ljava.lang.String;@3e332aff
+[DEBUG][2016-07-07 17:46:42,437][com.sirding.ini.ConfigTest]执行的cmd命令:[Ljava.lang.String;@69684b79
+[DEBUG][2016-07-07 17:47:04,786][com.sirding.ini.ConfigTest]执行的cmd命令:[Ljava.lang.String;@114beb40
+[DEBUG][2016-07-07 17:47:18,102][com.sirding.ini.ConfigTest]执行的cmd命令:[Ljava.lang.String;@69684b79
+[DEBUG][2016-07-07 17:47:18,209][com.sirding.ini.ConfigTest]'git' 不是内部或外部命令，也不是可运行的程序
+[DEBUG][2016-07-07 17:47:18,209][com.sirding.ini.ConfigTest]或批处理文件。
+[DEBUG][2016-07-07 17:47:48,364][com.sirding.ini.ConfigTest]执行的cmd命令:[Ljava.lang.String;@114beb40
+[DEBUG][2016-07-07 17:47:48,457][com.sirding.ini.ConfigTest]'ipconfig' 不是内部或外部命令，也不是可运行的程序
+[DEBUG][2016-07-07 17:47:48,457][com.sirding.ini.ConfigTest]或批处理文件。
+[DEBUG][2016-07-07 17:48:12,812][com.sirding.ini.ConfigTest]执行的cmd命令:[Ljava.lang.String;@3e332aff
+[DEBUG][2016-07-07 17:48:12,999][com.sirding.ini.ConfigTest]
+[DEBUG][2016-07-07 17:48:12,999][com.sirding.ini.ConfigTest]Windows IP 配置
+[DEBUG][2016-07-07 17:48:13,000][com.sirding.ini.ConfigTest]
+[DEBUG][2016-07-07 17:48:13,010][com.sirding.ini.ConfigTest]
+[DEBUG][2016-07-07 17:48:13,010][com.sirding.ini.ConfigTest]以太网适配器 以太网:
+[DEBUG][2016-07-07 17:48:13,010][com.sirding.ini.ConfigTest]
+[DEBUG][2016-07-07 17:48:13,011][com.sirding.ini.ConfigTest]   媒体状态  . . . . . . . . . . . . : 媒体已断开连接
+[DEBUG][2016-07-07 17:48:13,011][com.sirding.ini.ConfigTest]   连接特定的 DNS 后缀 . . . . . . . : 150.211.1.3
+[DEBUG][2016-07-07 17:48:13,011][com.sirding.ini.ConfigTest]
+[DEBUG][2016-07-07 17:48:13,012][com.sirding.ini.ConfigTest]无线局域网适配器 本地连接* 2:
+[DEBUG][2016-07-07 17:48:13,012][com.sirding.ini.ConfigTest]
+[DEBUG][2016-07-07 17:48:13,012][com.sirding.ini.ConfigTest]   媒体状态  . . . . . . . . . . . . : 媒体已断开连接
+[DEBUG][2016-07-07 17:48:13,012][com.sirding.ini.ConfigTest]   连接特定的 DNS 后缀 . . . . . . . : 
+[DEBUG][2016-07-07 17:48:13,013][com.sirding.ini.ConfigTest]
+[DEBUG][2016-07-07 17:48:13,013][com.sirding.ini.ConfigTest]无线局域网适配器 本地连接* 6:
+[DEBUG][2016-07-07 17:48:13,016][com.sirding.ini.ConfigTest]
+[DEBUG][2016-07-07 17:48:13,016][com.sirding.ini.ConfigTest]   媒体状态  . . . . . . . . . . . . : 媒体已断开连接
+[DEBUG][2016-07-07 17:48:13,017][com.sirding.ini.ConfigTest]   连接特定的 DNS 后缀 . . . . . . . : 
+[DEBUG][2016-07-07 17:48:13,017][com.sirding.ini.ConfigTest]
+[DEBUG][2016-07-07 17:48:13,017][com.sirding.ini.ConfigTest]无线局域网适配器 WLAN:
+[DEBUG][2016-07-07 17:48:13,018][com.sirding.ini.ConfigTest]
+[DEBUG][2016-07-07 17:48:13,018][com.sirding.ini.ConfigTest]   连接特定的 DNS 后缀 . . . . . . . : 
+[DEBUG][2016-07-07 17:48:13,018][com.sirding.ini.ConfigTest]   本地链接 IPv6 地址. . . . . . . . : fe80::8dcd:f669:8499:5802%9
+[DEBUG][2016-07-07 17:48:13,019][com.sirding.ini.ConfigTest]   IPv4 地址 . . . . . . . . . . . . : 192.168.1.26
+[DEBUG][2016-07-07 17:48:13,019][com.sirding.ini.ConfigTest]   子网掩码  . . . . . . . . . . . . : 255.255.255.0
+[DEBUG][2016-07-07 17:48:13,019][com.sirding.ini.ConfigTest]   默认网关. . . . . . . . . . . . . : 192.168.1.254
+[DEBUG][2016-07-07 17:48:13,019][com.sirding.ini.ConfigTest]
+[DEBUG][2016-07-07 17:48:13,020][com.sirding.ini.ConfigTest]以太网适配器 蓝牙网络连接:
+[DEBUG][2016-07-07 17:48:13,020][com.sirding.ini.ConfigTest]
+[DEBUG][2016-07-07 17:48:13,020][com.sirding.ini.ConfigTest]   媒体状态  . . . . . . . . . . . . : 媒体已断开连接
+[DEBUG][2016-07-07 17:48:13,021][com.sirding.ini.ConfigTest]   连接特定的 DNS 后缀 . . . . . . . : 
+[DEBUG][2016-07-07 17:48:40,089][com.sirding.ini.ConfigTest]执行的cmd命令:[Ljava.lang.String;@114beb40
+[DEBUG][2016-07-07 17:48:40,213][com.sirding.ini.ConfigTest]'git' 不是内部或外部命令，也不是可运行的程序
+[DEBUG][2016-07-07 17:48:40,213][com.sirding.ini.ConfigTest]或批处理文件。
+[DEBUG][2016-07-07 17:55:53,101][com.sirding.ini.ConfigTest]执行的cmd命令:[Ljava.lang.String;@633b2b95
+[DEBUG][2016-07-07 17:55:53,485][com.sirding.ini.ConfigTest]'git' 不是内部或外部命令，也不是可运行的程序
+[DEBUG][2016-07-07 17:55:53,485][com.sirding.ini.ConfigTest]或批处理文件。
+[DEBUG][2016-07-07 17:58:17,710][com.sirding.ini.ConfigTest]执行的cmd命令:[Ljava.lang.String;@141fe06
+[DEBUG][2016-07-07 17:58:17,796][com.sirding.ini.ConfigTest]'git' 不是内部或外部命令，也不是可运行的程序
+[DEBUG][2016-07-07 17:58:17,797][com.sirding.ini.ConfigTest]或批处理文件。
+[DEBUG][2016-07-07 17:59:29,065][com.sirding.ini.ConfigTest]执行的cmd命令:[Ljava.lang.String;@5bdbda4f
+[DEBUG][2016-07-07 17:59:29,158][com.sirding.ini.ConfigTest]'git' 不是内部或外部命令，也不是可运行的程序
+[DEBUG][2016-07-07 17:59:29,159][com.sirding.ini.ConfigTest]或批处理文件。
+[DEBUG][2016-07-07 18:03:45,683][com.sirding.ini.ConfigTest]执行的cmd命令:[Ljava.lang.String;@138c3c8f
+[DEBUG][2016-07-07 18:03:46,078][com.sirding.ini.ConfigTest]java version "1.8.0_77"
+[DEBUG][2016-07-07 18:03:46,078][com.sirding.ini.ConfigTest]Java(TM) SE Runtime Environment (build 1.8.0_77-b03)
+[DEBUG][2016-07-07 18:03:46,078][com.sirding.ini.ConfigTest]Java HotSpot(TM) 64-Bit Server VM (build 25.77-b03, mixed mode)
+[DEBUG][2016-07-07 18:03:56,708][com.sirding.ini.ConfigTest]执行的cmd命令:[Ljava.lang.String;@3ed9a7a6
+[DEBUG][2016-07-07 18:03:56,960][com.sirding.ini.ConfigTest]java version "1.8.0_77"
+[DEBUG][2016-07-07 18:03:56,960][com.sirding.ini.ConfigTest]Java(TM) SE Runtime Environment (build 1.8.0_77-b03)
+[DEBUG][2016-07-07 18:03:56,961][com.sirding.ini.ConfigTest]Java HotSpot(TM) 64-Bit Server VM (build 25.77-b03, mixed mode)
+[DEBUG][2016-07-07 18:07:31,314][com.sirding.ini.ConfigTest]执行的cmd命令:[Ljava.lang.String;@138c3c8f
+[DEBUG][2016-07-07 18:07:31,621][com.sirding.ini.ConfigTest]java version "1.8.0_77"
+[DEBUG][2016-07-07 18:07:31,621][com.sirding.ini.ConfigTest]Java(TM) SE Runtime Environment (build 1.8.0_77-b03)
+[DEBUG][2016-07-07 18:07:31,621][com.sirding.ini.ConfigTest]Java HotSpot(TM) 64-Bit Server VM (build 25.77-b03, mixed mode)
+[DEBUG][2016-07-07 18:08:16,175][com.sirding.ini.ConfigTest]执行的cmd命令:[Ljava.lang.String;@138c3c8f
+[DEBUG][2016-07-07 18:08:16,324][com.sirding.ini.ConfigTest] M src/com/sirding/test/Demo1.java
+[DEBUG][2016-07-07 18:08:16,325][com.sirding.ini.ConfigTest]?? src/com/sirding/model/
+[DEBUG][2016-07-07 18:08:16,325][com.sirding.ini.ConfigTest]?? src/com/sirding/test/Demo2.java
