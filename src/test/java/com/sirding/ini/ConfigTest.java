@@ -11,7 +11,10 @@ import org.junit.Test;
 
 import com.sirding.model.Config;
 import com.sirding.model.GlobalConfig;
+import com.sirding.service.AutomateService;
+import com.sirding.service.LogMsg;
 import com.sirding.singleton.IniTool;
+import com.sirding.util.SftpUtil;
 
 
 public class ConfigTest {
@@ -19,6 +22,7 @@ public class ConfigTest {
 	private static String filePath;
 	private static IniTool iniTool;
 	private Logger logger = Logger.getLogger(ConfigTest.class);
+	
 	@BeforeClass
 	public static void init(){
 		filePath = ConfigTest.class.getResource("/").toString() + "config.ini";
@@ -52,7 +56,6 @@ public class ConfigTest {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-	
 	}
 	
 	@Test
@@ -77,6 +80,36 @@ public class ConfigTest {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+	}
+	
+	@Test
+	public void test3(){
+		try {
+			AutomateService auto = new AutomateService();
+			GlobalConfig gconfig = auto.loadGlobalConfig();
+			if(gconfig == null){
+				LogMsg.showMsg("找不到【global】配置信息");
+			}
+			Config config = auto.loadConfig(gconfig.getRunSec());
+			if(config == null){
+				LogMsg.showMsg("找不到【" + gconfig.getRunSec() + "】配置");
+			}
+			String flag = auto.initSftp(gconfig);
+			if(!flag.equals("ok")){
+				LogMsg.showMsg("不能实例化sshd连接");
+			}
+			String src = "/data/www/temp/zcding/a.txt";
+			String dst = "C:\\yrtz\\test\\cc\\downFile.txt";
+			SftpUtil.download(src, dst);
+//			SftpUtil.download("/data/www/temp/zcding/a.txt", "C:\\yrtz\\test\\a.txt");
+//			SftpUtil.download("/data/www/temp/zcding/b.txt", "C:\\yrtz\\test\\b.txt");
+//			String path = "/data/www/temp/zcding/aa";
+//			SftpUtil.mkdirPath(path);
+//			SftpUtil.exec("mkdir -p /data/www/temp/zcding/aa/bb/cc");
+//			SftpUtil.exec("mkdir -p /data/www/temp/zcding/cc/bb/cc");
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }

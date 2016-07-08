@@ -6,19 +6,23 @@ pwd = jtsec@123456
 private_key = 
 passphrase = 
 run_sec = tomcat1
+suffix = src/java,src/resources
+index = 1
+date = 20160706
+black_path_list =
+black_key_pattern = 
 
 [tomcat1]
-tomcat_path = C:/yrtz/tools/TOMCAT/apache-tomcat-6.0.43/webapps/yrtz
-project_path = C:/yrtz/git/git_temp/yrtz
+remote_tomcat_path = /data/www/tomcat-lianlian-6.0.43-TEST2/webapps/yrtz_vip
+local_tomcat_path = C:/yrtz/tools/TOMCAT/apache-tomcat-6.0.43/webapps/demo-web
+project_path = C:/yrtz/git/github/demo-web
 commit_id = 
-bak_folder_name_suffix = bak
-index = 1
-date = 2016-07-06
+increment = 0
 
 [tomcat2]
-tomcat_path = C:/yrtz/tools/TOMCAT/apache-tomcat-6.0.43/webapps/yrtz
+remote_tomcat_path = /data/www/tomcat-lianlian-6.0.43-TEST2/webapps/yrtz_vip
+local_tomcat_path = C:/yrtz/tools/TOMCAT/apache-tomcat-6.0.43/webapps/demo-web
 project_path = C:/yrtz/git/git_temp/yrtz
-bak_folder_name_suffix = bak
-index = 1
-date = 2016-07-06
+commit_id =
+increment = 0
 

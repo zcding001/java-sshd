@@ -9,7 +9,7 @@ import com.sirding.annotation.Option;
  */
 public class GlobalConfig {
 
-	@Option(isSection = true)
+	@Option(isSection = true, blankLine = true)
 	private String secName = "global";
 	@Option
 	private String ip;
@@ -25,6 +25,19 @@ public class GlobalConfig {
 	private String passphrase;
 	@Option(key = "run_sec")
 	private String runSec;
+	@Option
+	private String index;
+	@Option
+	private String date;
+	@Option
+	private String suffix;
+	@Option(key = "black_path_list")
+	private String blackPathList;
+	@Option(key = "black_key_pattern")
+	private String blackKeyPattern;
+	
+	
+	
 	public String getSecName() {
 		return secName;
 	}
@@ -73,4 +86,35 @@ public class GlobalConfig {
 	public void setRunSec(String runSec) {
 		this.runSec = runSec;
 	}
+	public String getIndex() {
+		return index;
+	}
+	public void setIndex(String index) {
+		this.index = index;
+	}
+	public String getDate() {
+		return date;
+	}
+	public void setDate(String date) {
+		this.date = date;
+	}
+	public String getBlackPathList() {
+		return blackPathList;
+	}
+	public void setBlackPathList(String blackPathList) {
+		this.blackPathList = blackPathList;
+	}
+	public String getBlackKeyPattern() {
+		return blackKeyPattern;
+	}
+	public void setBlackKeyPattern(String blackKeyPattern) {
+		this.blackKeyPattern = blackKeyPattern;
+	}
+	public String getSuffix() {
+		return suffix;
+	}
+	public void setSuffix(String suffix) {
+		this.suffix = suffix;
+	}
+	
 }

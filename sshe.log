@@ -131,3 +131,97 @@
 [DEBUG][2016-07-07 18:08:16,324][com.sirding.ini.ConfigTest] M src/com/sirding/test/Demo1.java
 [DEBUG][2016-07-07 18:08:16,325][com.sirding.ini.ConfigTest]?? src/com/sirding/model/
 [DEBUG][2016-07-07 18:08:16,325][com.sirding.ini.ConfigTest]?? src/com/sirding/test/Demo2.java
+[DEBUG][2016-07-08 10:19:03,849][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 10:19:03,881][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 10:19:40,058][com.sirding.service.AutomateService]执行的cmd命令:git -C C:/yrtz/git/git_temp/yrtz staus --short
+[DEBUG][2016-07-08 10:21:19,235][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 10:22:00,918][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 10:22:20,935][com.sirding.service.AutomateService]执行的cmd命令:git -C C:/yrtz/git/git_temp/yrtz staus --short
+[DEBUG][2016-07-08 10:25:56,949][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 10:28:51,366][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 10:29:07,056][com.sirding.service.AutomateService]执行的cmd命令:git -C C:/yrtz/git/git_temp/yrtz status --short
+[DEBUG][2016-07-08 10:35:14,184][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 10:35:14,210][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 10:35:14,216][com.sirding.service.AutomateService]执行的cmd命令:git -C C:/yrtz/git/git_temp/yrtz status --short
+[DEBUG][2016-07-08 10:36:29,019][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 10:36:29,045][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 10:36:29,050][com.sirding.service.AutomateService]执行的cmd命令:git -C C:/yrtz/git/github/demo-web status --short
+[DEBUG][2016-07-08 10:37:07,820][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 10:37:07,863][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 10:37:07,870][com.sirding.service.AutomateService]执行的cmd命令:git -C C:/yrtz/git/github/demo-web status --short
+[DEBUG][2016-07-08 11:02:39,126][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 11:02:39,156][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 11:02:39,164][com.sirding.service.AutomateService]执行的cmd命令:git -C C:/yrtz/git/github/demo-web status --short
+[DEBUG][2016-07-08 11:03:18,255][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 11:03:18,286][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 11:03:18,290][com.sirding.service.AutomateService]执行的cmd命令:git -C C:/yrtz/git/github/demo-web status --short
+[DEBUG][2016-07-08 11:04:44,951][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 11:04:44,979][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 11:04:44,984][com.sirding.service.AutomateService]执行的cmd命令:git -C C:/yrtz/git/github/demo-web status --short
+[DEBUG][2016-07-08 11:06:09,868][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 11:06:09,904][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 11:06:09,909][com.sirding.service.AutomateService]执行的cmd命令:git -C C:/yrtz/git/github/demo-web status --short
+[DEBUG][2016-07-08 11:09:01,293][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 11:09:01,323][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 11:09:01,328][com.sirding.service.AutomateService]执行的cmd命令:git -C C:/yrtz/git/github/demo-web status --short
+[DEBUG][2016-07-08 11:13:06,593][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 11:13:06,658][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 11:13:06,667][com.sirding.service.AutomateService]执行的cmd命令:git -C C:/yrtz/git/github/demo-web status --short
+[DEBUG][2016-07-08 11:18:40,452][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 11:18:40,479][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 11:18:40,483][com.sirding.service.AutomateService]执行的cmd命令:git -C C:/yrtz/git/github/demo-web status --short
+[DEBUG][2016-07-08 13:18:29,802][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 13:18:29,849][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 13:18:29,858][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【C:\yrtz\test\automate\config.ini】文件中
+[DEBUG][2016-07-08 13:18:29,863][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-07-08 13:18:29,865][com.sirding.service.AutomateService]执行的cmd命令:git -C C:/yrtz/git/github/demo-web status --short
+[DEBUG][2016-07-08 13:20:22,389][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 13:20:22,419][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 13:20:22,432][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【C:\yrtz\test\automate\config.ini】文件中
+[DEBUG][2016-07-08 13:20:22,437][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-07-08 13:20:22,443][com.sirding.service.AutomateService]执行的cmd命令:git -C C:/yrtz/git/github/demo-web status --short
+[DEBUG][2016-07-08 13:23:21,624][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 13:23:44,857][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 13:23:44,872][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【C:\yrtz\test\automate\config.ini】文件中
+[DEBUG][2016-07-08 13:23:44,877][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-07-08 13:23:44,883][com.sirding.service.AutomateService]执行的cmd命令:git -C C:/yrtz/git/github/demo-web status --short
+[DEBUG][2016-07-08 13:24:47,448][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 13:24:57,098][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 13:24:57,110][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【C:\yrtz\test\automate\config.ini】文件中
+[DEBUG][2016-07-08 13:24:57,117][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-07-08 13:24:57,119][com.sirding.service.AutomateService]执行的cmd命令:git -C C:/yrtz/git/github/demo-web status --short
+[DEBUG][2016-07-08 13:29:28,118][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 13:29:28,146][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 13:29:28,155][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【C:\yrtz\test\automate\config.ini】文件中
+[DEBUG][2016-07-08 13:29:28,161][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-07-08 13:29:28,164][com.sirding.service.AutomateService]执行的cmd命令:git -C C:/yrtz/git/github/demo-web status --short
+[DEBUG][2016-07-08 14:26:23,399][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 14:26:25,450][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 14:34:45,382][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 14:34:45,521][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 14:35:15,946][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 14:35:15,974][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 14:54:16,687][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 14:54:16,714][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 14:56:25,081][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 14:56:25,110][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 14:58:00,957][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 14:58:00,987][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 15:23:24,354][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 15:23:24,382][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 15:24:37,531][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 15:24:37,559][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 15:26:23,000][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 15:26:23,028][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 15:41:02,147][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 15:41:02,204][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 15:41:42,232][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 15:41:42,263][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 15:43:47,096][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 15:43:47,124][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 15:45:01,733][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 15:45:01,763][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 15:45:17,566][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 15:45:17,594][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 15:45:59,914][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-08 15:45:59,949][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
