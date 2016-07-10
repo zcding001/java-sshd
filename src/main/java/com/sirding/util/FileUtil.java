@@ -5,6 +5,8 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.channels.FileChannel;
+
+import com.sirding.service.LogMsg;
 /**
  * 文件工具类
  * @author zc.ding
@@ -12,16 +14,30 @@ import java.nio.channels.FileChannel;
  */
 public class FileUtil {
 
+	/**
+	 * 创建文件目录
+	 * @param directory
+	 * @author zc.ding
+	 * @date 2016年7月10日
+	 */
 	public static void mkdir(String directory){
 		File file = new File(directory);
 		file.mkdirs();
 	}
 
+	/**
+	 * 拷贝文件
+	 * @param src
+	 * @param dst
+	 * @author zc.ding
+	 * @date 2016年7月10日
+	 */
 	public static void copyFile(String src, String dst){
 		File srcFile = new File(src);
 		File dstFile = new File(dst);
 		mkdir(dstFile.getParent());
 		if(!srcFile.isFile() || !srcFile.exists()){
+			LogMsg.saveMsg("找不到【" + srcFile.getAbsolutePath()+ "】\n");
 			return;
 		}
 		FileInputStream fi = null;
@@ -48,9 +64,39 @@ public class FileUtil {
 		}
 	}
 	
+	/**
+	 * 拷贝文件夹
+	 * @param src
+	 * @param dst
+	 * @author zc.ding
+	 * @date 2016年7月10日
+	 */
+	public static void copyFolder(String src, String dst){
+		src = src.replaceAll("\\\\", "/");
+		dst = dst.replaceAll("\\\\", "/");
+		File srcFile = new File(src);
+		File dstFile = new File(dst);
+		if(srcFile.isDirectory()){
+			mkdir(dstFile.getAbsolutePath());
+			File[] files = srcFile.listFiles();
+			if(files.length > 0){
+				for(File file : files){
+					if(file.isDirectory()){
+						copyFolder(file.getAbsolutePath(), file.getAbsolutePath().replaceAll("\\\\", "/").replaceAll(src, dst));
+					}
+					copyFile(file.getAbsolutePath(), file.getAbsolutePath().replaceAll("\\\\", "/").replaceAll(src, dst));
+				}
+			}
+		}else{
+			copyFile(src, dst);
+		}
+	}
+	
 	public static void main(String[] args) {
 		String path = "C:\\yrtz\\test\\automate\\data\\20160707_1\\upload\\WEB-INF\\classes\\com\\sirding\\test\\Demo1.class";
-		File file = new File(path);
-		System.out.println(file.getParentFile().mkdirs());
+//		File file = new File(path);
+//		System.out.println(file.getParentFile().mkdirs());
+		
+		System.out.println(path.replaceAll("\\\\", "/"));
 	}
 }

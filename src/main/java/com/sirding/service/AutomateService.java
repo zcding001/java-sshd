@@ -20,6 +20,7 @@ import com.sirding.util.FileUtil;
 import com.sirding.util.SftpUtil;
 
 public class AutomateService {
+	private String path = "";
 	private String rootPath = "";
 	private String uploadPath = "";
 	private String downloadPath = "";
@@ -35,8 +36,10 @@ public class AutomateService {
 	
 	public AutomateService(){
 		iniTool = IniTool.newInstance();
-//		String path = System.getProperty("user.dir");
-		filePath = "C:\\yrtz\\test\\automate\\config.ini";
+		path = System.getProperty("user.dir").replaceAll("\\\\", "/") + "/";
+		System.out.println("工作路径：" + path);
+//		filePath = "C:\\yrtz\\test\\automate\\config.ini";
+		filePath = path + "config.ini";
 	}
 	
 	/**
@@ -50,12 +53,16 @@ public class AutomateService {
 		StringBuffer sb = new StringBuffer(LogMsg.SEP);
 		String date = gconfig.getDate();
 		String index = gconfig.getIndex();
+		if("1".equals(gconfig.getAutoUpdateIndex()) && new File(rootPath).isDirectory() && new File(rootPath).exists()){
+			index = Integer.parseInt(index) + 1 + "";
+		}
 		String currDate = new SimpleDateFormat("yyyyMMdd").format(new Date());
 		if(!date.equals(currDate)){
 			date = currDate;
 			index = "1";
 		}
-		rootPath = "C:/yrtz/test/automate/data/" + date + "_" + index;
+//		rootPath = "C:/yrtz/test/automate/data/" + date + "_" + index;
+		rootPath = path + "/data/" + date + "_" + index;
 		//创建用户上传的文件夹
 		uploadPath = rootPath + "/upload";
 		FileUtil.mkdir(uploadPath);
@@ -63,21 +70,23 @@ public class AutomateService {
 		downloadPath = rootPath + "/download";
 		FileUtil.mkdir(downloadPath);
 		//初始化用于存储升级文件列表的文件
-		fileListPath = rootPath + File.separator + "fileList.txt";
-		LogMsg.initPath(rootPath + File.separator + "log.txt");
+		fileListPath = rootPath + "/" + "fileList.txt";
+		LogMsg.initPath(rootPath + "/log.txt");
 		try {
 			//更新升级日期及索引
-			gconfig.setIndex(Integer.parseInt(index) + 1 + "");
+			if("1".equals(gconfig.getAutoUpdateIndex())){
+				gconfig.setIndex(Integer.parseInt(index) + 1 + "");
+			}
 			gconfig.setDate(date);
 			iniTool.saveSec(gconfig, filePath);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		sb.append("第[" + index + "]此升级\n");
+		sb.append("第[" + index + "]次升级\n");
 		sb.append("root:\t" + rootPath + "\n");
 		sb.append("uploadPath:\t" + uploadPath + "\n");
 		sb.append("downloadPath:\t" + downloadPath + "\n");
-		sb.append("log_path:\t" + rootPath + File.separator + "log.txt\n");
+		sb.append("log_path:\t" + rootPath + "/" + "log.txt\n");
 		sb.append("fileListPath:\t" + fileListPath + "\n");
 		sb.append(LogMsg.SEP + "\n");
 		LogMsg.saveMsg(sb.toString());
@@ -107,27 +116,6 @@ public class AutomateService {
 	}
 
 	/**
-	 * 初始化sshd连接
-	 * @param gconfig
-	 * @return
-	 * @date 2016年7月7日
-	 * @author zc.ding
-	 */
-	public String initSftp(GlobalConfig gconfig){
-		String host = gconfig.getIp();
-		int port = Integer.parseInt(gconfig.getPort());
-		String userName = gconfig.getUserName();
-		String password = gconfig.getPwd();
-		String privateKey = gconfig.getPrivateKey();
-		String passphrase = gconfig.getPassphrase();
-		String flag = SftpUtil.initSftp(host, port, userName, password, privateKey, passphrase);
-		if(!"ok".equals(flag)){
-			logger.debug("SSHD连接初始化失败");
-		}
-		return flag;
-	}
-
-	/**
 	 * 获得更新的文件列表
 	 * @param projectPath
 	 * @param commitId
@@ -135,8 +123,10 @@ public class AutomateService {
 	 * @date 2016年7月7日
 	 * @author zc.ding
 	 */
-	public void getOptionFileInfo(String projectPath, String commitId) {
-		StringBuffer sb = new StringBuffer("\n" + LogMsg.SEP);
+	public void getOptionFileInfo(GlobalConfig gconfig, Config config) {
+		String projectPath = config.getProjectPath();
+		String commitId = config.getCommitId();
+		StringBuffer sb = new StringBuffer("\n" + "统计更新文件列表" + LogMsg.SEP);
 		String cmd = "git -C " + projectPath + " " + gitDiff;
 		if(commitId != null && commitId.length() > 0){
 			String[] arr = commitId.split(",");
@@ -168,6 +158,17 @@ public class AutomateService {
 				}
 				//替换ftl,css文件
 				line = line.replaceAll("WebRoot", "");
+				String suffix = gconfig.getSuffix();
+				if(suffix != null && suffix.length() > -1){
+					String[] s = suffix.split(",");
+					if(s != null){
+						for(String tmp : s){
+							if(line.indexOf(tmp) > -1){
+								continue;
+							}
+						}
+					}
+				}
 				bw.write(line);
 				bw.write("\n");
 				sb.append(line + "\n");
@@ -187,7 +188,8 @@ public class AutomateService {
 	 * @author zc.ding
 	 */
 	public void initUploadFiles(Config config){
-		StringBuffer sb = new StringBuffer("\n" + LogMsg.SEP);
+		LogMsg.saveMsg("\n" + "准备要更新的文件" + LogMsg.SEP);
+		StringBuffer sb = new StringBuffer();
 		String localTomcatPath = config.getLocalTomcatPath();
 		try {
 			BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(fileListPath))); 
@@ -196,14 +198,18 @@ public class AutomateService {
 				String src = "";
 				String dst = "";
 				if(!line.startsWith("/")){
-					src = localTomcatPath + File.separator + line;
-					dst = uploadPath + File.separator + line;
+					src = localTomcatPath + "/" + line;
+					dst = uploadPath + "/" + line;
 				}else{
 					src = localTomcatPath + line;
 					dst = uploadPath + line;
 				}
-				FileUtil.copyFile(src, dst);
-				sb.append(src + " ===>" + dst + "\n");
+				if(new File(src).isFile()){
+					FileUtil.copyFile(src, dst);
+				}else{
+					FileUtil.copyFolder(src, dst);
+				}
+				sb.append(src + "   ===>   " + dst + "\n");
 			}
 			br.close();
 		} catch (Exception e) {
@@ -219,7 +225,7 @@ public class AutomateService {
 	 * @author zc.ding
 	 */
 	public void initDownloadFiles(Config config){
-		StringBuffer sb = new StringBuffer("\n" + LogMsg.SEP);
+		StringBuffer sb = new StringBuffer("\n" + "下载要备份的文件" + LogMsg.SEP);
 		String remoteTomcatPath = config.getRemoteTomcatPath();
 		try {
 			BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(fileListPath))); 
@@ -228,15 +234,18 @@ public class AutomateService {
 				String src = "";
 				String dst = "";
 				if(!line.startsWith("/")){
-					src = remoteTomcatPath + File.separator + line;
-					dst = downloadPath + File.separator + line;
+					src = remoteTomcatPath + "/" + line;
+					dst = downloadPath + "/" + line;
 				}else{
 					src = remoteTomcatPath + line;
 					dst = downloadPath + line;
 				}
+				if(src.endsWith("\\\\") || src.endsWith("/")){
+					continue;
+				}
 				SftpUtil.download(src, dst);
 				//记录下载文件的列表
-				sb.append(src + "===download==>" + dst + "\n");
+				sb.append(src + "    ===download==>   " + dst + "\n");
 			}
 			br.close();
 		} catch (Exception e) {
@@ -248,7 +257,7 @@ public class AutomateService {
 	public String uploadOper(Config config){
 		File file = new File(uploadPath);
 		String remoteTomcatPath = config.getRemoteTomcatPath();
-		StringBuffer sb = new StringBuffer("\n" + LogMsg.SEP);
+		StringBuffer sb = new StringBuffer("\n已上传至服务器的文件列表" + LogMsg.SEP);
 		recursion(file, remoteTomcatPath, sb);
 		//将sb写入到log.txt文件中
 		LogMsg.saveMsg(sb.toString());
@@ -270,8 +279,8 @@ public class AutomateService {
 				if(tmp.isDirectory()){
 					recursion(tmp, remoteTomcatPath, sb);
 				}else{
-					String src = tmp.getAbsolutePath();
-					String dst = src.replaceAll(uploadPath, remoteTomcatPath);
+					String src = tmp.getAbsolutePath().replaceAll("\\\\", "/");
+					String dst = src.replaceAll(uploadPath.replaceAll("\\\\", "/"), remoteTomcatPath.replaceAll("\\\\", "/"));
 					try {
 						SftpUtil.upload(src, dst);
 						sb.append("ok\t" + src + " ==> " + dst).append("\n");
@@ -282,5 +291,22 @@ public class AutomateService {
 				}
 			}
 		}
+	}
+	
+	/**
+	 * 重启tomcat
+	 * @param config
+	 * @author zc.ding
+	 * @date 2016年7月10日
+	 */
+	public void restartTomcat(Config config){
+		String remoteTomcatPath = config.getRemoteTomcatPath();
+		String shPath = new File(remoteTomcatPath).getParentFile().getParent() + "/bin/";
+		String stopCmd = "/bin/sh " + shPath + "shutdown.sh";
+		String startCmd = "/bin/sh " + shPath + "start.sh";
+		System.out.println(stopCmd.replaceAll("\\\\", "/"));
+		System.out.println(startCmd.replaceAll("\\\\", "/"));
+		SftpUtil.exec(stopCmd.replaceAll("\\\\", "/"));
+		SftpUtil.exec(startCmd.replaceAll("\\\\", "/"));
 	}
 }

@@ -1,15 +1,17 @@
 [global]
-ip = 192.168.8.1
-port = 22
-user_name = root
-pwd = jtsec@123456
+ip = 101.201.152.200
+port = 8177
+user_name = develop
+pwd = yrSuper001
 private_key = 
 passphrase = 
 run_sec = tomcat1
-suffix = src/java,src/resources
 index = 1
-date = 20160706
-black_path_list =
+date = 20160708
+auto_update_index = 1
+#default src/java,src/resources,src/main/resources,src/main/java,src/
+suffix = 
+black_path_list = 
 black_key_pattern = 
 
 [tomcat1]
@@ -17,12 +19,9 @@ remote_tomcat_path = /data/www/tomcat-lianlian-6.0.43-TEST2/webapps/yrtz_vip
 local_tomcat_path = C:/yrtz/tools/TOMCAT/apache-tomcat-6.0.43/webapps/demo-web
 project_path = C:/yrtz/git/github/demo-web
 commit_id = 
-increment = 0
 
 [tomcat2]
 remote_tomcat_path = /data/www/tomcat-lianlian-6.0.43-TEST2/webapps/yrtz_vip
 local_tomcat_path = C:/yrtz/tools/TOMCAT/apache-tomcat-6.0.43/webapps/demo-web
-project_path = C:/yrtz/git/git_temp/yrtz
-commit_id =
-increment = 0
-
+project_path = C:/yrtz/git/github/demo-web
+commit_id = 

@@ -9,7 +9,7 @@ import com.sirding.annotation.Option;
  */
 public class GlobalConfig {
 
-	@Option(isSection = true, blankLine = true)
+	@Option(isSection = true)
 	private String secName = "global";
 	@Option
 	private String ip;
@@ -19,9 +19,9 @@ public class GlobalConfig {
 	private String userName;
 	@Option
 	private String pwd;
-	@Option(key = "private_key")
+	@Option(key = "private_key", saveFlag = 2)
 	private String privateKey;
-	@Option
+	@Option(saveFlag = 2)
 	private String passphrase;
 	@Option(key = "run_sec")
 	private String runSec;
@@ -29,6 +29,8 @@ public class GlobalConfig {
 	private String index;
 	@Option
 	private String date;
+	@Option(key = "auto_update_index")
+	private String autoUpdateIndex;
 	@Option
 	private String suffix;
 	@Option(key = "black_path_list")
@@ -116,5 +118,10 @@ public class GlobalConfig {
 	public void setSuffix(String suffix) {
 		this.suffix = suffix;
 	}
-	
+	public String getAutoUpdateIndex() {
+		return autoUpdateIndex;
+	}
+	public void setAutoUpdateIndex(String autoUpdateIndex) {
+		this.autoUpdateIndex = autoUpdateIndex;
+	}
 }

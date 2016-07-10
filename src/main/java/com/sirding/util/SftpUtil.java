@@ -5,12 +5,14 @@ import java.util.Properties;
 
 
 
+
 import com.jcraft.jsch.Channel;
 import com.jcraft.jsch.ChannelExec;
 import com.jcraft.jsch.ChannelSftp;
 import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.Session;
 import com.jcraft.jsch.SftpATTRS;
+import com.sirding.service.LogMsg;
 
 /**
  * 连接sshd的工具类
@@ -43,13 +45,13 @@ public class SftpUtil {
 			channel.connect();
 			sftp = (ChannelSftp) channel;
 			if(sftp == null){
-				return "1";
+				return "0";
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 			return "0";
 		}
-		return "0";
+		return "1";
 	}
 
 	/**
@@ -111,6 +113,7 @@ public class SftpUtil {
 	 */
 	public static void download(String downloadFile, String saveFile) {
 		try {
+			FileUtil.mkdir(new File(saveFile).getParent());
 			sftp.get(downloadFile,saveFile);
 		} catch (Exception e) {
 			String msg = e.getMessage();
@@ -162,11 +165,15 @@ public class SftpUtil {
 	 * @author zc.ding
 	 * @date 2016年7月7日
 	 */
-	public static void disconnected() throws Exception{
-		if (sftp != null) {
-			sftp.getSession().disconnect();
-			sftp.disconnect();
-			System.out.println("okok...");
+	public static void disconnected(){
+		try {
+			if (sftp != null) {
+				sftp.getSession().disconnect();
+				sftp.disconnect();
+				System.out.println("sshd连接已正常关闭!" + LogMsg.SEP + "\n");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 	}
 

@@ -225,3 +225,144 @@
 [DEBUG][2016-07-08 15:45:17,594][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
 [DEBUG][2016-07-08 15:45:59,914][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
 [DEBUG][2016-07-08 15:45:59,949][com.sirding.service.impl.SecServiceImpl]从【C:\yrtz\test\automate\config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 11:20:08,727][com.sirding.service.impl.SecServiceImpl]从【G:\test\sshd\config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 11:20:08,765][com.sirding.service.impl.SecServiceImpl]从【G:\test\sshd\config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 11:20:08,778][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【G:\test\sshd\config.ini】文件中
+[DEBUG][2016-07-10 11:20:08,784][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-07-10 11:20:20,266][com.sirding.service.AutomateService]SSHD连接初始化失败
+[DEBUG][2016-07-10 11:21:05,454][com.sirding.service.impl.SecServiceImpl]从【G:\test\sshd\config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 11:21:05,492][com.sirding.service.impl.SecServiceImpl]从【G:\test\sshd\config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 11:21:05,503][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【G:\test\sshd\config.ini】文件中
+[DEBUG][2016-07-10 11:21:05,508][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-07-10 11:24:04,510][com.sirding.service.AutomateService]SSHD连接初始化失败
+[DEBUG][2016-07-10 11:28:22,590][com.sirding.service.impl.SecServiceImpl]从【G:\test\sshd\config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 11:28:22,628][com.sirding.service.impl.SecServiceImpl]从【G:\test\sshd\config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 11:28:22,640][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【G:\test\sshd\config.ini】文件中
+[DEBUG][2016-07-10 11:28:22,644][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-07-10 11:28:33,925][com.sirding.service.AutomateService]执行的cmd命令:git -C E:/git/github/demo-web status --short
+[DEBUG][2016-07-10 11:49:40,735][com.sirding.service.impl.SecServiceImpl]从【G:\test\sshd\config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 11:49:40,771][com.sirding.service.impl.SecServiceImpl]从【G:\test\sshd\config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 11:49:40,809][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【G:\test\sshd\config.ini】文件中
+[DEBUG][2016-07-10 11:49:40,814][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-07-10 11:49:52,124][com.sirding.service.AutomateService]执行的cmd命令:git -C E:/git/github/demo-web status --short
+[DEBUG][2016-07-10 12:01:20,548][com.sirding.service.impl.SecServiceImpl]从【G:\test\sshd\config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 12:01:20,583][com.sirding.service.impl.SecServiceImpl]从【G:\test\sshd\config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 12:01:20,660][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【G:\test\sshd\config.ini】文件中
+[DEBUG][2016-07-10 12:01:20,664][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-07-10 12:01:31,963][com.sirding.service.AutomateService]执行的cmd命令:git -C E:/git/github/demo-web status --short
+[DEBUG][2016-07-10 12:17:03,656][com.sirding.service.impl.SecServiceImpl]从【G:\test\sshd\config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 12:17:03,696][com.sirding.service.impl.SecServiceImpl]从【G:\test\sshd\config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 12:17:03,763][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【G:\test\sshd\config.ini】文件中
+[DEBUG][2016-07-10 12:17:03,769][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-07-10 12:17:15,202][com.sirding.service.AutomateService]执行的cmd命令:git -C E:/git/github/demo-web status --short
+[DEBUG][2016-07-10 12:22:42,676][com.sirding.service.impl.SecServiceImpl]从【G:\test\sshd\config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 12:22:42,714][com.sirding.service.impl.SecServiceImpl]从【G:\test\sshd\config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 12:22:42,756][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【G:\test\sshd\config.ini】文件中
+[DEBUG][2016-07-10 12:22:42,760][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-07-10 12:22:54,011][com.sirding.service.AutomateService]执行的cmd命令:git -C E:/git/github/demo-web status --short
+[DEBUG][2016-07-10 12:25:37,567][com.sirding.service.impl.SecServiceImpl]从【G:\test\sshd\config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 12:25:37,604][com.sirding.service.impl.SecServiceImpl]从【G:\test\sshd\config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 12:25:37,650][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【G:\test\sshd\config.ini】文件中
+[DEBUG][2016-07-10 12:25:37,654][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-07-10 12:25:48,935][com.sirding.service.AutomateService]执行的cmd命令:git -C E:/git/github/demo-web status --short
+[DEBUG][2016-07-10 17:11:17,786][com.sirding.service.impl.SecServiceImpl]从【G:\test\sshd\config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 17:11:17,834][com.sirding.service.impl.SecServiceImpl]从【G:\test\sshd\config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 17:11:17,863][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【G:\test\sshd\config.ini】文件中
+[DEBUG][2016-07-10 17:11:17,867][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-07-10 17:11:29,149][com.sirding.service.AutomateService]执行的cmd命令:git -C E:/git/github/demo-web status --short
+[DEBUG][2016-07-10 17:24:24,331][com.sirding.service.impl.SecServiceImpl]从【G:\test\sshd\config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 17:24:24,366][com.sirding.service.impl.SecServiceImpl]从【G:\test\sshd\config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 17:24:24,412][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【G:\test\sshd\config.ini】文件中
+[DEBUG][2016-07-10 17:24:24,417][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-07-10 17:24:35,690][com.sirding.service.AutomateService]执行的cmd命令:git -C E:/git/github/demo-web status --short
+[DEBUG][2016-07-10 17:45:49,580][com.sirding.service.impl.SecServiceImpl]从【G:\test\sshd\config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 17:45:49,616][com.sirding.service.impl.SecServiceImpl]从【G:\test\sshd\config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 17:45:49,664][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【G:\test\sshd\config.ini】文件中
+[DEBUG][2016-07-10 17:45:49,668][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-07-10 17:46:01,034][com.sirding.service.AutomateService]执行的cmd命令:git -C E:/git/github/demo-web status --short
+[DEBUG][2016-07-10 18:09:22,156][com.sirding.service.impl.SecServiceImpl]从【G:\test\sshd\config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 18:09:22,193][com.sirding.service.impl.SecServiceImpl]从【G:\test\sshd\config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 18:09:22,203][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【G:\test\sshd\config.ini】文件中
+[DEBUG][2016-07-10 18:09:22,208][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-07-10 18:09:33,517][com.sirding.service.AutomateService]执行的cmd命令:git -C E:/git/github/demo-web status --short
+[DEBUG][2016-07-10 18:11:41,991][com.sirding.service.impl.SecServiceImpl]从【G:\test\sshd\config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 18:11:42,028][com.sirding.service.impl.SecServiceImpl]从【G:\test\sshd\config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 18:11:42,064][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【G:\test\sshd\config.ini】文件中
+[DEBUG][2016-07-10 18:11:42,069][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-07-10 18:11:53,305][com.sirding.service.AutomateService]执行的cmd命令:git -C E:/git/github/demo-web status --short
+[DEBUG][2016-07-10 18:16:16,542][com.sirding.service.impl.SecServiceImpl]从【G:\test\sshd\config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 18:16:16,578][com.sirding.service.impl.SecServiceImpl]从【G:\test\sshd\config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 18:16:16,621][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【G:\test\sshd\config.ini】文件中
+[DEBUG][2016-07-10 18:16:16,625][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-07-10 18:16:27,910][com.sirding.service.AutomateService]执行的cmd命令:git -C E:/git/github/demo-web status --short
+[DEBUG][2016-07-10 18:19:38,669][com.sirding.service.impl.SecServiceImpl]从【G:\test\sshd\config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 18:19:38,710][com.sirding.service.impl.SecServiceImpl]从【G:\test\sshd\config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 18:19:38,757][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【G:\test\sshd\config.ini】文件中
+[DEBUG][2016-07-10 18:19:38,762][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-07-10 18:19:50,046][com.sirding.service.AutomateService]执行的cmd命令:git -C E:/git/github/demo-web status --short
+[DEBUG][2016-07-10 18:32:03,910][com.sirding.service.impl.SecServiceImpl]从【E:/git/github/java-sshd/target/test-classes/config.ini】文件中加载配置信息
+[ERROR][2016-07-10 18:32:03,937][com.sirding.service.impl.SecServiceImpl]ERROR-Exception=======没有CONF_FILE_PATH属性或配置文件不存在======
+[DEBUG][2016-07-10 18:32:50,312][com.sirding.service.impl.SecServiceImpl]从【E:/git/github/java-sshd/target/test-classes/config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 18:32:50,346][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【E:/git/github/java-sshd/target/test-classes/config.ini】文件中
+[DEBUG][2016-07-10 18:32:50,352][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-07-10 18:34:14,079][com.sirding.service.impl.SecServiceImpl]从【E:/git/github/java-sshd/target/test-classes/config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 18:34:14,110][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【E:/git/github/java-sshd/target/test-classes/config.ini】文件中
+[DEBUG][2016-07-10 18:34:14,117][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-07-10 18:35:56,268][com.sirding.service.impl.SecServiceImpl]从【E:/git/github/java-sshd/target/test-classes/config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 18:35:56,299][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【E:/git/github/java-sshd/target/test-classes/config.ini】文件中
+[DEBUG][2016-07-10 18:35:56,305][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-07-10 18:35:56,308][com.sirding.service.impl.SecServiceImpl]从【E:/git/github/java-sshd/target/test-classes/config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 18:35:56,311][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【E:/git/github/java-sshd/target/test-classes/config.ini】文件中
+[DEBUG][2016-07-10 18:35:56,315][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-07-10 18:36:12,104][com.sirding.service.impl.SecServiceImpl]从【E:/git/github/java-sshd/target/test-classes/config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 18:36:12,135][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【E:/git/github/java-sshd/target/test-classes/config.ini】文件中
+[DEBUG][2016-07-10 18:36:12,142][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-07-10 18:36:12,145][com.sirding.service.impl.SecServiceImpl]从【E:/git/github/java-sshd/target/test-classes/config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 18:36:12,148][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【E:/git/github/java-sshd/target/test-classes/config.ini】文件中
+[DEBUG][2016-07-10 18:36:12,151][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-07-10 18:36:16,862][com.sirding.service.impl.SecServiceImpl]从【E:/git/github/java-sshd/target/test-classes/config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 18:36:16,893][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【E:/git/github/java-sshd/target/test-classes/config.ini】文件中
+[DEBUG][2016-07-10 18:36:16,900][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-07-10 18:36:16,903][com.sirding.service.impl.SecServiceImpl]从【E:/git/github/java-sshd/target/test-classes/config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 18:37:27,922][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【E:/git/github/java-sshd/target/test-classes/config.ini】文件中
+[DEBUG][2016-07-10 18:38:44,836][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-07-10 18:39:28,365][com.sirding.service.impl.SecServiceImpl]从【E:/git/github/java-sshd/target/test-classes/config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 18:39:28,395][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【E:/git/github/java-sshd/target/test-classes/config.ini】文件中
+[DEBUG][2016-07-10 18:39:28,402][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-07-10 18:39:28,405][com.sirding.service.impl.SecServiceImpl]从【E:/git/github/java-sshd/target/test-classes/config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 18:39:28,409][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【E:/git/github/java-sshd/target/test-classes/config.ini】文件中
+[DEBUG][2016-07-10 18:39:28,411][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-07-10 18:39:43,319][com.sirding.service.impl.SecServiceImpl]从【E:/git/github/java-sshd/target/test-classes/config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 18:39:43,351][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【E:/git/github/java-sshd/target/test-classes/config.ini】文件中
+[DEBUG][2016-07-10 18:39:43,358][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-07-10 18:39:43,361][com.sirding.service.impl.SecServiceImpl]从【E:/git/github/java-sshd/target/test-classes/config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 18:39:43,365][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【E:/git/github/java-sshd/target/test-classes/config.ini】文件中
+[DEBUG][2016-07-10 18:39:43,368][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-07-10 19:36:13,003][com.sirding.service.impl.SecServiceImpl]从【E:/git/github/java-sshd/target/test-classes/config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 19:36:13,044][com.sirding.service.impl.SecServiceImpl]从【E:/git/github/java-sshd/target/test-classes/config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 19:39:12,105][com.sirding.service.impl.SecServiceImpl]从【E:/git/github/java-sshd/target/test-classes/config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 19:41:01,980][com.sirding.service.impl.SecServiceImpl]从【G:\test\sshd\config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 19:41:02,017][com.sirding.service.impl.SecServiceImpl]从【G:\test\sshd\config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 19:41:02,050][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【G:\test\sshd\config.ini】文件中
+[DEBUG][2016-07-10 19:41:02,055][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-07-10 19:44:26,165][com.sirding.service.impl.SecServiceImpl]从【G:\test\sshd\config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 19:44:26,201][com.sirding.service.impl.SecServiceImpl]从【G:\test\sshd\config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 19:44:26,210][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【G:\test\sshd\config.ini】文件中
+[DEBUG][2016-07-10 19:44:26,215][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-07-10 19:45:35,897][com.sirding.service.impl.SecServiceImpl]从【G:\test\sshd\config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 19:45:35,937][com.sirding.service.impl.SecServiceImpl]从【G:\test\sshd\config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 19:45:35,948][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【G:\test\sshd\config.ini】文件中
+[DEBUG][2016-07-10 19:45:35,953][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-07-10 19:46:56,669][com.sirding.service.impl.SecServiceImpl]从【G:\test\sshd\config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 19:46:56,708][com.sirding.service.impl.SecServiceImpl]从【G:\test\sshd\config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 19:46:56,717][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【G:\test\sshd\config.ini】文件中
+[DEBUG][2016-07-10 19:46:56,721][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-07-10 19:47:44,321][com.sirding.service.impl.SecServiceImpl]从【G:\test\sshd\config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 19:47:44,359][com.sirding.service.impl.SecServiceImpl]从【G:\test\sshd\config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 19:47:44,367][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【G:\test\sshd\config.ini】文件中
+[DEBUG][2016-07-10 19:47:44,372][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-07-10 19:49:43,912][com.sirding.service.impl.SecServiceImpl]从【G:\test\sshd\config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 19:49:43,956][com.sirding.service.impl.SecServiceImpl]从【G:\test\sshd\config.ini】文件中加载配置信息
+[DEBUG][2016-07-10 19:49:43,964][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【G:\test\sshd\config.ini】文件中
+[DEBUG][2016-07-10 19:49:43,971][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-07-10 19:56:02,587][com.sirding.service.impl.SecServiceImpl]从【E:\git\github\java-sshdconfig.ini】文件中加载配置信息
