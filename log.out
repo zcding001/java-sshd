@@ -1,0 +1,25 @@
+[DEBUG][2016-07-22 16:30:32,204][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/project4ecplise/java-sshd/target/test-classes/config.ini】文件中加载配置信息
+[DEBUG][2016-07-22 16:30:32,262][com.sirding.ini.ConfigTest]执行的cmd命令:[Ljava.lang.String;@19f9bdc4
+[DEBUG][2016-07-22 16:30:32,458][com.sirding.ini.ConfigTest] M .project
+[DEBUG][2016-07-22 16:30:32,459][com.sirding.ini.ConfigTest] D WebRoot/WEB-INF/classes/.gitignore
+[DEBUG][2016-07-22 16:30:32,459][com.sirding.ini.ConfigTest] M src/com/sirding/test/Demo1.java
+[DEBUG][2016-07-22 16:30:32,460][com.sirding.ini.ConfigTest]?? WebRoot/WEB-INF/classes/com/
+[DEBUG][2016-07-22 16:30:32,460][com.sirding.ini.ConfigTest]?? src/com/sirding/model/
+[DEBUG][2016-07-22 16:30:32,461][com.sirding.ini.ConfigTest]?? src/com/sirding/test/Demo2.java
+[DEBUG][2016-07-22 16:30:32,467][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/project4ecplise/java-sshd/target/test-classes/config.ini】文件中加载配置信息
+[DEBUG][2016-07-22 16:30:32,474][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【C:/yrtz/project4ecplise/java-sshd/target/test-classes/config.ini】文件中
+[DEBUG][2016-07-22 16:30:32,479][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-07-22 16:30:32,482][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/project4ecplise/java-sshd/target/test-classes/config.ini】文件中加载配置信息
+[DEBUG][2016-07-22 16:30:32,485][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【C:/yrtz/project4ecplise/java-sshd/target/test-classes/config.ini】文件中
+[DEBUG][2016-07-22 16:30:32,488][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-07-22 16:30:32,490][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/project4ecplise/java-sshd/target/test-classes/config.ini】文件中加载配置信息
+[DEBUG][2016-07-22 16:30:32,493][com.sirding.ini.ConfigTest]===========全局配置配置信息=======
+[DEBUG][2016-07-22 16:30:32,495][com.sirding.ini.ConfigTest]ip:101.201.152.200:8177
+[DEBUG][2016-07-22 16:30:32,500][com.sirding.ini.ConfigTest]userName:develop/******
+[DEBUG][2016-07-22 16:30:32,500][com.sirding.ini.ConfigTest]要应用的配置节点：tomcat1
+[DEBUG][2016-07-22 16:30:32,501][com.sirding.ini.ConfigTest]===========全局配置配置信息=======
+[DEBUG][2016-07-22 16:30:32,502][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/project4ecplise/java-sshd/target/test-classes/config.ini】文件中加载配置信息
+[DEBUG][2016-07-22 16:30:32,506][com.sirding.ini.ConfigTest]==================应用配置信息=================
+[DEBUG][2016-07-22 16:30:32,506][com.sirding.ini.ConfigTest]tomca位置:	C:/yrtz/tools/TOMCAT/apache-tomcat-6.0.43/webapps/demo-web
+[DEBUG][2016-07-22 16:30:32,507][com.sirding.ini.ConfigTest]git项目位置：	
+[DEBUG][2016-07-22 16:30:32,508][com.sirding.ini.ConfigTest]==================应用配置信息=================
