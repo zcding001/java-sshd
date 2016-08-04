@@ -20,6 +20,7 @@ import com.sirding.util.FileUtil;
 import com.sirding.util.SftpUtil;
 
 public class AutomateService {
+	private static final String FILE_LIST_SEQ = "<=####=>";
 	private String path = "";
 	private String rootPath = "";
 	private String uploadPath = "";
@@ -36,7 +37,8 @@ public class AutomateService {
 	
 	public AutomateService(){
 		iniTool = IniTool.newInstance();
-		path = System.getProperty("user.dir").replaceAll("\\\\", "/") + "/";
+		path = replaceSeq(System.getProperty("user.dir")) + "/";
+		path = "C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/";
 		System.out.println("工作路径：" + path);
 //		filePath = "C:\\yrtz\\test\\automate\\config.ini";
 		filePath = path + "config.ini";
@@ -62,7 +64,7 @@ public class AutomateService {
 			index = "1";
 		}
 //		rootPath = "C:/yrtz/test/automate/data/" + date + "_" + index;
-		rootPath = path + "/data/" + date + "_" + index;
+		rootPath = path + "data/" + date + "_" + index;
 		//创建用户上传的文件夹
 		uploadPath = rootPath + "/upload";
 		FileUtil.mkdir(uploadPath);
@@ -138,47 +140,77 @@ public class AutomateService {
 			sb.append(cmd + "\n");
 			Process p = run.exec(cmd);// 启动另一个进程来执行命令  
 			BufferedReader br = new BufferedReader(new InputStreamReader(new BufferedInputStream(p.getInputStream()))); 
-			BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(fileListPath)));
+			BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(fileListPath), "UTF-8"));
 			String line = null;
-			while((line = br.readLine()) != null){
-				sb.append("git ").append(line).append("\t");
-				String[] arr = line.trim().split(" +");
-				if(arr.length != 2){
-					continue;
-				}
-				line = arr[1];
-				//处理xml,java
-				line = line.replaceAll("src/source|src/java", "/WEB-INF/classes");
-				line = line.replaceAll("src/main/resources|src/main/java", "/WEB-INF/classes");
-				if(line.startsWith("src/")){
-					line = line.replaceAll("src/", "/WEB-INF/classes/");
-				}
-				if(line.endsWith(".java")){
-					line = line.replaceAll(".java", ".class");
-				}
-				//替换ftl,css文件
-				line = line.replaceAll("WebRoot", "");
-				String suffix = gconfig.getSuffix();
-				if(suffix != null && suffix.length() > -1){
-					String[] s = suffix.split(",");
-					if(s != null){
-						for(String tmp : s){
-							if(line.indexOf(tmp) > -1){
-								continue;
+			int index = 0;
+			outter:
+				while((line = br.readLine()) != null){
+					//line eg: M src/main/java/com/qiankundai/web/controller/UserController.java
+					sb.append("git ").append(line);
+					String[] arr = line.trim().split(" +");
+					if(arr.length != 2){
+						continue;
+					}
+					line = arr[1];
+					//黑名单处理特殊文件
+					String blackKeyPattern = config.getBlackKeyPattern();
+					if(blackKeyPattern != null && blackKeyPattern.length() > 0){
+						String[] key = blackKeyPattern.split(",");
+						if(key != null){
+							for(String tmp : key){
+								if(line.indexOf(tmp) > -1){
+									continue outter;
+								}
 							}
 						}
 					}
+					String srcFile = replaceKey(line, config.getReplaceSrc());
+					String dstFile = replaceKey(line, config.getReplaceDst());
+					bw.write(srcFile + FILE_LIST_SEQ + dstFile);
+					bw.write("\n");
+					sb.append(FILE_LIST_SEQ + srcFile + "\n");
+					index++;
 				}
-				bw.write(line);
-				bw.write("\n");
-				sb.append(line + "\n");
-			}
 			bw.flush();
 			bw.close();
+			if(index == 0){
+				sb.append("\nCan not find the updated list of files.[找不到更新的文件列表]\n");
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		LogMsg.saveMsg(sb.toString());
+	}
+	
+	/**
+	 * 根据replacePattern替换line中的内容
+	 * @param line
+	 * @param replacePattern
+	 * @return
+	 * @date 2016年8月4日
+	 * @author zc.ding
+	 */
+	private String replaceKey(String line, String replacePattern){
+		if(replacePattern != null && replacePattern.length() > 0){
+			String[] oldNewArr = replacePattern.split(",");
+			if(oldNewArr != null){
+				for(String tmp : oldNewArr){
+					if(tmp != null){
+						String[] oldNew = tmp.split("_");
+						if(oldNew == null || oldNew.length < 2){
+							continue;
+						}
+						String old = oldNew[0];
+						String New = oldNew[1];
+						line = line.replaceAll(old, "/".equals(New)?"":New);
+					}
+				}
+			}
+		}
+		if(line.endsWith(".java")){
+			line = line.replaceAll("\\.java", ".class");
+		}
+		return line;
 	}
 	
 	/**
@@ -195,27 +227,62 @@ public class AutomateService {
 			BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(fileListPath))); 
 			String line = null;
 			while((line = br.readLine()) != null){
-				String src = "";
-				String dst = "";
-				if(!line.startsWith("/")){
-					src = localTomcatPath + "/" + line;
-					dst = uploadPath + "/" + line;
+				if(line.indexOf(FILE_LIST_SEQ) < 0){
+					continue;
+				}
+				String src = line.split(FILE_LIST_SEQ)[0];
+				if(!src.startsWith("/")){
+					src = localTomcatPath + "/" + src;
 				}else{
-					src = localTomcatPath + line;
-					dst = uploadPath + line;
+					src = localTomcatPath + src;
+				}
+				String dst = line.split(FILE_LIST_SEQ)[1];
+				if(!dst.startsWith("/")){
+					dst = uploadPath + "/" + dst;
+				}else{
+					dst = uploadPath + dst;
 				}
 				if(new File(src).isFile()){
 					FileUtil.copyFile(src, dst);
+					//判断文件是不是含有内部类
+					hasInnerClasses(src, dst, sb);
 				}else{
 					FileUtil.copyFolder(src, dst);
 				}
-				sb.append(src + "   ===>   " + dst + "\n");
+//				sb.append(src + "   ===>   " + dst + "\n");
+				sb.append(src + FILE_LIST_SEQ + dst + "\n");
 			}
 			br.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		LogMsg.saveMsg(sb.toString());
+	}
+	
+	/**
+	 * 赋值内部类
+	 * @param srcFile
+	 * @date 2016年8月3日
+	 * @author zc.ding
+	 */
+	private static void hasInnerClasses(String srcFile, String dstFile, StringBuffer sb){
+		if(!srcFile.endsWith(".class")){
+			return;
+		}
+		File file = new File(srcFile);
+		srcFile = srcFile.replaceAll("\\.class", "") + "$";
+		File pathFile = file.getParentFile();
+		File[] arr = pathFile.listFiles();
+		if(arr != null){
+			for(File tmp : arr){
+				String filePath = replaceSeq(tmp.getAbsolutePath());
+				if(filePath.indexOf(srcFile) > -1){
+					String dstFilePath = replaceSeq(new File(dstFile).getParent()) + "/" + tmp.getName();
+					FileUtil.copyFile(filePath, dstFilePath);
+					sb.append("内部类：" + filePath + "   ===>   " + dstFilePath + "\n");
+				}
+			}
+		}
 	}
 	
 	/**
@@ -254,6 +321,13 @@ public class AutomateService {
 		LogMsg.saveMsg(sb.toString());
 	}
 	
+	/**
+	 * 
+	 * @param config
+	 * @return
+	 * @date 2016年8月3日
+	 * @author zc.ding
+	 */
 	public String uploadOper(Config config){
 		File file = new File(uploadPath);
 		String remoteTomcatPath = config.getRemoteTomcatPath();
@@ -279,8 +353,8 @@ public class AutomateService {
 				if(tmp.isDirectory()){
 					recursion(tmp, remoteTomcatPath, sb);
 				}else{
-					String src = tmp.getAbsolutePath().replaceAll("\\\\", "/");
-					String dst = src.replaceAll(uploadPath.replaceAll("\\\\", "/"), remoteTomcatPath.replaceAll("\\\\", "/"));
+					String src = replaceSeq(tmp.getAbsolutePath());
+					String dst = src.replaceAll(replaceSeq(uploadPath), replaceSeq(remoteTomcatPath));
 					try {
 						SftpUtil.upload(src, dst);
 						sb.append("ok\t" + src + " ==> " + dst).append("\n");
@@ -304,9 +378,20 @@ public class AutomateService {
 		String shPath = new File(remoteTomcatPath).getParentFile().getParent() + "/bin/";
 		String stopCmd = "/bin/sh " + shPath + "shutdown.sh";
 		String startCmd = "/bin/sh " + shPath + "start.sh";
-		System.out.println(stopCmd.replaceAll("\\\\", "/"));
-		System.out.println(startCmd.replaceAll("\\\\", "/"));
-		SftpUtil.exec(stopCmd.replaceAll("\\\\", "/"));
-		SftpUtil.exec(startCmd.replaceAll("\\\\", "/"));
+		System.out.println(replaceSeq(stopCmd));
+		System.out.println(replaceSeq(startCmd));
+		SftpUtil.exec(replaceSeq(stopCmd));
+		SftpUtil.exec(replaceSeq(startCmd));
+	}
+	
+	/**
+	 * 
+	 * @param filePath
+	 * @return
+	 * @date 2016年8月4日
+	 * @author zc.ding
+	 */
+	private static String replaceSeq(String filePath){
+		return filePath.replaceAll("\\\\", "/");
 	}
 }

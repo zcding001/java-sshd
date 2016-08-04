@@ -19,6 +19,12 @@ public class Config {
 	private String projectPath;
 	@Option(key = "commit_id")
 	private String commitId;
+	@Option(key = "replace_src")
+	private String replaceSrc;
+	@Option(key = "replace_dst")
+	private String replaceDst;
+	@Option(key = "black_key_pattern")
+	private String blackKeyPattern;
 	
 	public String getSecName() {
 		return secName;
@@ -49,5 +55,23 @@ public class Config {
 	}
 	public void setCommitId(String commitId) {
 		this.commitId = commitId;
+	}
+	public String getReplaceSrc() {
+		return replaceSrc;
+	}
+	public void setReplaceSrc(String replaceSrc) {
+		this.replaceSrc = replaceSrc;
+	}
+	public String getReplaceDst() {
+		return replaceDst;
+	}
+	public void setReplaceDst(String replaceDst) {
+		this.replaceDst = replaceDst;
+	}
+	public String getBlackKeyPattern() {
+		return blackKeyPattern;
+	}
+	public void setBlackKeyPattern(String blackKeyPattern) {
+		this.blackKeyPattern = blackKeyPattern;
 	}
 }

@@ -23,3 +23,101 @@
 [DEBUG][2016-07-22 16:30:32,506][com.sirding.ini.ConfigTest]tomcaλ��:	C:/yrtz/tools/TOMCAT/apache-tomcat-6.0.43/webapps/demo-web
 [DEBUG][2016-07-22 16:30:32,507][com.sirding.ini.ConfigTest]git��Ŀλ�ã�	
 [DEBUG][2016-07-22 16:30:32,508][com.sirding.ini.ConfigTest]==================Ӧ��������Ϣ=================
+[DEBUG][2016-08-04 13:54:12,625][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中加载配置信息
+[DEBUG][2016-08-04 13:54:12,673][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中加载配置信息
+[DEBUG][2016-08-04 13:54:12,682][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中
+[DEBUG][2016-08-04 13:54:12,687][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-08-04 13:54:54,606][com.sirding.service.AutomateService]执行的cmd命令:git -C C:/yrtz/git/git_openapi/openapi status --short
+[DEBUG][2016-08-04 13:57:34,622][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中加载配置信息
+[DEBUG][2016-08-04 13:57:34,703][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中加载配置信息
+[DEBUG][2016-08-04 13:57:34,717][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中
+[DEBUG][2016-08-04 13:57:34,724][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-08-04 13:57:45,760][com.sirding.service.AutomateService]执行的cmd命令:git -C C:/yrtz/git/git_openapi/openapi status --short
+[DEBUG][2016-08-04 14:04:36,063][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中加载配置信息
+[DEBUG][2016-08-04 14:04:36,124][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中加载配置信息
+[DEBUG][2016-08-04 14:04:36,134][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中
+[DEBUG][2016-08-04 14:04:36,138][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-08-04 14:04:43,664][com.sirding.service.AutomateService]执行的cmd命令:git -C C:/yrtz/git/git_openapi/openapi status --short
+[DEBUG][2016-08-04 14:09:46,339][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中加载配置信息
+[DEBUG][2016-08-04 14:09:46,406][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中加载配置信息
+[DEBUG][2016-08-04 14:09:46,422][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中
+[DEBUG][2016-08-04 14:09:46,429][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-08-04 14:09:47,598][com.sirding.service.AutomateService]执行的cmd命令:git -C C:/yrtz/git/git_openapi/openapi status --short
+[DEBUG][2016-08-04 14:11:42,427][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中加载配置信息
+[DEBUG][2016-08-04 14:11:42,460][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中加载配置信息
+[DEBUG][2016-08-04 14:11:42,467][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中
+[DEBUG][2016-08-04 14:11:42,470][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-08-04 14:11:43,329][com.sirding.service.AutomateService]执行的cmd命令:git -C C:/yrtz/git/git_openapi/openapi status --short
+[DEBUG][2016-08-04 14:15:07,104][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中加载配置信息
+[DEBUG][2016-08-04 14:15:07,167][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中加载配置信息
+[DEBUG][2016-08-04 14:15:07,175][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中
+[DEBUG][2016-08-04 14:15:07,182][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-08-04 14:15:08,359][com.sirding.service.AutomateService]执行的cmd命令:git -C C:/yrtz/git/git_openapi/openapi status --short
+[DEBUG][2016-08-04 14:17:22,793][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中加载配置信息
+[DEBUG][2016-08-04 14:17:22,850][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中加载配置信息
+[DEBUG][2016-08-04 14:17:22,858][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中
+[DEBUG][2016-08-04 14:17:22,862][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-08-04 14:17:23,708][com.sirding.service.AutomateService]执行的cmd命令:git -C C:/yrtz/git/git_openapi/openapi status --short
+[DEBUG][2016-08-04 14:19:23,051][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中加载配置信息
+[DEBUG][2016-08-04 14:19:23,087][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中加载配置信息
+[DEBUG][2016-08-04 14:19:23,092][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中
+[DEBUG][2016-08-04 14:19:23,095][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-08-04 15:20:31,712][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中加载配置信息
+[DEBUG][2016-08-04 15:20:31,759][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中加载配置信息
+[DEBUG][2016-08-04 15:20:31,767][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中
+[DEBUG][2016-08-04 15:20:31,771][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-08-04 15:20:32,844][com.sirding.service.AutomateService]执行的cmd命令:git -C C:/yrtz/git/git_openapi/openapi status --short
+[DEBUG][2016-08-04 15:30:12,969][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中加载配置信息
+[DEBUG][2016-08-04 15:30:13,019][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中加载配置信息
+[DEBUG][2016-08-04 15:30:13,027][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中
+[DEBUG][2016-08-04 15:30:13,030][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-08-04 15:30:13,838][com.sirding.service.AutomateService]执行的cmd命令:git -C C:/yrtz/git/git_openapi/openapi status --short
+[DEBUG][2016-08-04 15:32:07,389][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中加载配置信息
+[DEBUG][2016-08-04 15:32:07,424][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中加载配置信息
+[DEBUG][2016-08-04 15:32:07,437][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中
+[DEBUG][2016-08-04 15:32:07,442][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-08-04 15:32:11,370][com.sirding.service.AutomateService]执行的cmd命令:git -C C:/yrtz/git/git_openapi/openapi status --short
+[DEBUG][2016-08-04 15:33:14,647][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中加载配置信息
+[DEBUG][2016-08-04 15:33:14,679][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中加载配置信息
+[DEBUG][2016-08-04 15:33:14,688][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中
+[DEBUG][2016-08-04 15:33:14,692][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-08-04 15:33:15,795][com.sirding.service.AutomateService]执行的cmd命令:git -C C:/yrtz/git/git_openapi/openapi status --short
+[DEBUG][2016-08-04 15:36:34,217][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中加载配置信息
+[DEBUG][2016-08-04 15:36:34,267][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中加载配置信息
+[DEBUG][2016-08-04 15:36:34,283][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中
+[DEBUG][2016-08-04 15:36:34,285][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-08-04 15:36:35,422][com.sirding.service.AutomateService]执行的cmd命令:git -C C:/yrtz/git/git_openapi/openapi status --short
+[DEBUG][2016-08-04 15:39:37,259][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中加载配置信息
+[DEBUG][2016-08-04 15:39:37,293][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中加载配置信息
+[DEBUG][2016-08-04 15:39:37,303][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中
+[DEBUG][2016-08-04 15:39:37,306][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-08-04 15:48:33,927][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中加载配置信息
+[DEBUG][2016-08-04 15:48:33,963][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中加载配置信息
+[DEBUG][2016-08-04 15:48:33,970][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中
+[DEBUG][2016-08-04 15:48:33,973][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-08-04 15:49:41,186][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中加载配置信息
+[DEBUG][2016-08-04 15:49:41,225][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中加载配置信息
+[DEBUG][2016-08-04 15:49:41,233][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中
+[DEBUG][2016-08-04 15:49:41,236][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-08-04 16:01:16,980][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中加载配置信息
+[DEBUG][2016-08-04 16:01:17,040][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中加载配置信息
+[DEBUG][2016-08-04 16:01:17,098][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中
+[DEBUG][2016-08-04 16:01:17,102][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-08-04 16:01:18,364][com.sirding.service.AutomateService]执行的cmd命令:git -C C:/yrtz/git/git_openapi/openapi status --short
+[DEBUG][2016-08-04 16:02:33,571][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中加载配置信息
+[DEBUG][2016-08-04 16:02:33,602][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中加载配置信息
+[DEBUG][2016-08-04 16:02:33,609][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中
+[DEBUG][2016-08-04 16:02:33,613][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-08-04 16:05:59,639][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中加载配置信息
+[DEBUG][2016-08-04 16:05:59,671][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中加载配置信息
+[DEBUG][2016-08-04 16:05:59,682][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中
+[DEBUG][2016-08-04 16:05:59,685][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-08-04 16:07:36,568][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中加载配置信息
+[DEBUG][2016-08-04 16:07:36,616][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中加载配置信息
+[DEBUG][2016-08-04 16:07:36,627][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中
+[DEBUG][2016-08-04 16:07:36,631][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-08-04 16:19:23,671][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中加载配置信息
+[DEBUG][2016-08-04 16:19:23,711][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中加载配置信息
+[DEBUG][2016-08-04 16:19:23,726][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中
+[DEBUG][2016-08-04 16:19:23,729][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2016-08-04 16:19:24,633][com.sirding.service.AutomateService]执行的cmd命令:git -C C:/yrtz/git/git_openapi/openapi status --short

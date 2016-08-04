@@ -31,14 +31,6 @@ public class GlobalConfig {
 	private String date;
 	@Option(key = "auto_update_index")
 	private String autoUpdateIndex;
-	@Option
-	private String suffix;
-	@Option(key = "black_path_list")
-	private String blackPathList;
-	@Option(key = "black_key_pattern")
-	private String blackKeyPattern;
-	
-	
 	
 	public String getSecName() {
 		return secName;
@@ -99,24 +91,6 @@ public class GlobalConfig {
 	}
 	public void setDate(String date) {
 		this.date = date;
-	}
-	public String getBlackPathList() {
-		return blackPathList;
-	}
-	public void setBlackPathList(String blackPathList) {
-		this.blackPathList = blackPathList;
-	}
-	public String getBlackKeyPattern() {
-		return blackKeyPattern;
-	}
-	public void setBlackKeyPattern(String blackKeyPattern) {
-		this.blackKeyPattern = blackKeyPattern;
-	}
-	public String getSuffix() {
-		return suffix;
-	}
-	public void setSuffix(String suffix) {
-		this.suffix = suffix;
 	}
 	public String getAutoUpdateIndex() {
 		return autoUpdateIndex;

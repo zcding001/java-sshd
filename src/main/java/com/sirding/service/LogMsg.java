@@ -28,7 +28,7 @@ public class LogMsg {
 	 */
 	public static void saveMsg(String msg){
 		try {
-			BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(LOG_PATH, true)));
+			BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(LOG_PATH, true), "UTF-8"));
 			bw.write(msg);
 			bw.flush();
 			bw.close();

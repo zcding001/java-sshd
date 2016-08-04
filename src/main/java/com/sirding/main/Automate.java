@@ -42,27 +42,29 @@ public class Automate {
 					return;
 				}
 				System.out.println("OK sshd连接已正常建立" + LogMsg.SEP);
-				String option = args[0];
-				if("git".equalsIgnoreCase(option) || "all".equalsIgnoreCase(option)){
-					//统计更新的文件列表保存到fileList.txt文件在中
-					auto.getOptionFileInfo(gconfig, config);
+				for(String option : args){
+					if("git".equalsIgnoreCase(option) || "all".equalsIgnoreCase(option)){
+						//统计更新的文件列表保存到fileList.txt文件在中
+						auto.getOptionFileInfo(gconfig, config);
+					}
+					if("copy".equalsIgnoreCase(option) || "all".equalsIgnoreCase(option)){
+						//在upload文件中创建要升级的文件结构目录
+						auto.initUploadFiles(config);
+					}
+					if("download".equalsIgnoreCase(option) || "all".equalsIgnoreCase(option)){
+						//将要更新的文件列表内容从远程服务器下载下来作为备份使用
+						auto.initDownloadFiles(config);
+					}
+					if("upload".equalsIgnoreCase(option) || "all".equalsIgnoreCase(option)){
+						//更新文件执上传操作
+						auto.uploadOper(config);
+					}
+//					if("restart".equalsIgnoreCase(option)){
+//						//重启tomcat
+//						auto.restartTomcat(config);
+//					}
+
 				}
-				if("copy".equalsIgnoreCase(option) || "all".equalsIgnoreCase(option)){
-					//在upload文件中创建要升级的文件结构目录
-					auto.initUploadFiles(config);
-				}
-				if("download".equalsIgnoreCase(option) || "all".equalsIgnoreCase(option)){
-					//将要更新的文件列表内容从远程服务器下载下来作为备份使用
-					auto.initDownloadFiles(config);
-				}
-				if("upload".equalsIgnoreCase(option) || "all".equalsIgnoreCase(option)){
-					//更新文件执上传操作
-					auto.uploadOper(config);
-				}
-//				if("restart".equalsIgnoreCase(option)){
-//					//重启tomcat
-//					auto.restartTomcat(config);
-//				}
 				//断开与服务器连接
 				SftpUtil.disconnected();
 			}else{

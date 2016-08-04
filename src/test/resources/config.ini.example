@@ -8,20 +8,22 @@ passphrase =
 run_sec = tomcat1
 index = 1
 date = 20160708
-auto_update_index = 1
-#default src/java,src/resources,src/main/resources,src/main/java,src/
-suffix = 
-black_path_list = 
-black_key_pattern = 
+auto_update_index = 1 
 
 [tomcat1]
 remote_tomcat_path = /data/www/tomcat-lianlian-6.0.43-TEST2/webapps/yrtz_vip
 local_tomcat_path = C:/yrtz/tools/TOMCAT/apache-tomcat-6.0.43/webapps/demo-web
 project_path = C:/yrtz/git/github/demo-web
+replace_src = src/java|src/resources_/,src/main/resources|src/main/java_/,src/_/,WebRoot/_/
+replace_dst = src/java|src/resources_/WEB-INF/classes,src/main/resources|src/main/java_/WEB-INF/classes,src/_/WEB-INF/classes/,WebRoot/_/
+black_key_pattern =
 commit_id = 
 
 [tomcat2]
 remote_tomcat_path = /data/www/tomcat-lianlian-6.0.43-TEST2/webapps/yrtz_vip
 local_tomcat_path = C:/yrtz/tools/TOMCAT/apache-tomcat-6.0.43/webapps/demo-web
 project_path = C:/yrtz/git/github/demo-web
+replace_src = src/java|src/resources_/,src/main/resources|src/main/java_/,src/_/,WebRoot/_/
+replace_dst = src/java|src/resources_/WEB-INF/classes,src/main/resources|src/main/java_/WEB-INF/classes,src/_/WEB-INF/classes/,WebRoot/_/
+black_key_pattern =
 commit_id = 
