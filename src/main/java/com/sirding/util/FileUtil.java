@@ -92,11 +92,34 @@ public class FileUtil {
 		}
 	}
 	
+	/**
+	 * 删除文件夹及文件夹中的文件
+	 * @param filePath
+	 * @date 2016年8月24日
+	 * @author zc.ding
+	 */
+	public static void delFolder(String filePath){
+		File file = new File(filePath);
+		File[] files = file.listFiles();
+		if(files != null && files.length > 0){
+			for(File tmp : files){
+				if(tmp.isDirectory()){
+					delFolder(tmp.getAbsolutePath());
+				}
+				tmp.delete();
+			}
+		}
+	}
+	
 	public static void main(String[] args) {
-		String path = "C:\\yrtz\\test\\automate\\data\\20160707_1\\upload\\WEB-INF\\classes\\com\\sirding\\test\\Demo1.class";
+//		String path = "C:\\yrtz\\test\\automate\\data\\20160707_1\\upload\\WEB-INF\\classes\\com\\sirding\\test\\Demo1.class";
 //		File file = new File(path);
 //		System.out.println(file.getParentFile().mkdirs());
 		
-		System.out.println(path.replaceAll("\\\\", "/"));
+//		System.out.println(path.replaceAll("\\\\", "/"));
+		
+		
+		String path = "c:/yrtz/test/aa/bb";
+		delFolder(path);
 	}
 }

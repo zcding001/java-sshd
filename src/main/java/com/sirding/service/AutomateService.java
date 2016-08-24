@@ -141,6 +141,7 @@ public class AutomateService {
 			Process p = run.exec(cmd);// 启动另一个进程来执行命令  
 			BufferedReader br = new BufferedReader(new InputStreamReader(new BufferedInputStream(p.getInputStream()))); 
 			BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(fileListPath), "UTF-8"));
+			bw.write("===========git中更新的文件列表============START========\n");
 			String line = null;
 			int index = 0;
 			outter:
@@ -171,6 +172,7 @@ public class AutomateService {
 					sb.append(FILE_LIST_SEQ + srcFile + "\n");
 					index++;
 				}
+			bw.write("===========git中更新的文件列表=============END=======\n\n");
 			bw.flush();
 			bw.close();
 			if(index == 0){
@@ -222,7 +224,10 @@ public class AutomateService {
 	public void initUploadFiles(Config config){
 		LogMsg.saveMsg("\n" + "准备要更新的文件" + LogMsg.SEP);
 		StringBuffer sb = new StringBuffer();
+		StringBuffer sb2 = new StringBuffer();
 		String localTomcatPath = config.getLocalTomcatPath();
+		//先清空历史文件
+		FileUtil.delFolder(uploadPath);
 		try {
 			BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(fileListPath))); 
 			String line = null;
@@ -245,14 +250,22 @@ public class AutomateService {
 				if(new File(src).isFile()){
 					FileUtil.copyFile(src, dst);
 					//判断文件是不是含有内部类
-					hasInnerClasses(src, dst, sb);
+					hasInnerClasses(src, dst, sb, sb2);
 				}else{
 					FileUtil.copyFolder(src, dst);
 				}
 //				sb.append(src + "   ===>   " + dst + "\n");
 				sb.append(src + FILE_LIST_SEQ + dst + "\n");
+				sb2.append(dst + "\n");
 			}
 			br.close();
+			//生成用于升级的文件列表
+			BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(fileListPath, true), "UTF-8"));
+			bw.write("===========用于升级的文件列表============START=================\n");
+			bw.write(sb2.toString().replaceAll(uploadPath, ""));
+			bw.write("===========用于升级的文件列表============END=================\n");
+			bw.flush();
+			bw.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -262,10 +275,13 @@ public class AutomateService {
 	/**
 	 * 赋值内部类
 	 * @param srcFile
-	 * @date 2016年8月3日
+	 * @param dstFile
+	 * @param sb
+	 * @param sb2
+	 * @date 2016年8月24日
 	 * @author zc.ding
 	 */
-	private static void hasInnerClasses(String srcFile, String dstFile, StringBuffer sb){
+	private static void hasInnerClasses(String srcFile, String dstFile, StringBuffer sb, StringBuffer sb2){
 		if(!srcFile.endsWith(".class")){
 			return;
 		}
@@ -280,6 +296,7 @@ public class AutomateService {
 					String dstFilePath = replaceSeq(new File(dstFile).getParent()) + "/" + tmp.getName();
 					FileUtil.copyFile(filePath, dstFilePath);
 					sb.append("内部类：" + filePath + "   ===>   " + dstFilePath + "\n");
+					sb2.append(dstFilePath + "\n");
 				}
 			}
 		}
