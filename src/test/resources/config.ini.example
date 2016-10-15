@@ -27,3 +27,12 @@ replace_src = src/java|src/resources_/,src/main/resources|src/main/java_/,src/_/
 replace_dst = src/java|src/resources_/WEB-INF/classes,src/main/resources|src/main/java_/WEB-INF/classes,src/_/WEB-INF/classes/,WebRoot/_/
 black_key_pattern =
 commit_id = 
+
+
+
+[generator]
+pom_path=E:/git/github/java-sm/pom.xml
+table_list=app_menu,app_perm
+pojo_list=AppMenu,AppPerm
+generator_path=/src/main/resources/generator/generatorConfig.xml
+old_template=<table schema="java_stu" tableName="TABLE_NAME" domainObjectName="POJO_NAME">

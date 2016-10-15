@@ -14,6 +14,7 @@ import java.util.Date;
 import org.apache.log4j.Logger;
 
 import com.sirding.model.Config;
+import com.sirding.model.Generator;
 import com.sirding.model.GlobalConfig;
 import com.sirding.singleton.IniTool;
 import com.sirding.util.FileUtil;
@@ -410,5 +411,100 @@ public class AutomateService {
 	 */
 	private static String replaceSeq(String filePath){
 		return filePath.replaceAll("\\\\", "/");
+	}
+	
+	
+	/**
+	 * 加载Genrator配置信息
+	 * @return
+	 * @throws Exception
+	 * @author zc.ding
+	 * @date 2016年10月15日
+	 */
+	public Generator getGenerator() throws Exception{
+		return iniTool.loadSingleSec(Generator.class, filePath, true, "generator");
+	}
+	
+	/**
+	 * 执行mvn mybatis-generator:generator
+	 * @param obj
+	 * @throws Exception
+	 * @author zc.ding
+	 * @date 2016年10月16日
+	 */
+	public void mvnGenerator(Generator obj) throws Exception{
+		this.resetGeneratorConfig(obj);
+		String tableList = obj.getTableList();
+		String pojoList = obj.getPojoList();
+		String[] tableArr = tableList.split(",");
+		String[] pojoArr = pojoList.split(",");
+		String generatorPath = path + obj.getGeneratorPath();
+		String oldTemplate = obj.getOldTemplate();
+		String cmd = "cmd exe /c mvn -f " + obj.getPomPath() + " mybatis-generator:generate";
+		String tableName = "TABLE_NAME";
+		String pojoName = "POJO_NAME";
+		for(int i = 0; i < tableArr.length; i++){
+			BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(generatorPath), "UTF-8"));
+			StringBuffer sb = new StringBuffer();
+			String line = null;
+			while((line = br.readLine()) != null){
+				if(line.indexOf(oldTemplate) > -1){
+					//对模板中的表名称及实体类名称进行替换操作
+					line = line.replaceAll(tableName, tableArr[i].trim()).replaceAll(pojoName, pojoArr[i].trim());
+					tableName = tableArr[i];
+					pojoName = pojoArr[i];
+					oldTemplate = line;
+				}
+				sb.append(line).append("\n");
+			}
+			br.close();
+			//将更新的内容重新回写到文件中
+			this.saveDataToFile(sb, generatorPath);
+			//执行mvn命令
+			Runtime run = Runtime.getRuntime();
+			Process p = run.exec(cmd);// 启动另一个进程来执行命令  
+			br = new BufferedReader(new InputStreamReader(new BufferedInputStream(p.getInputStream()))); 
+			while((line = br.readLine()) != null){
+				System.out.println(line);
+			}
+			br.close();
+		}
+	}
+	
+	/**
+	 * 重置generatorConfig.xml中table的配置
+	 * @param obj
+	 * @throws Exception
+	 * @author zc.ding
+	 * @date 2016年10月16日
+	 */
+	private void resetGeneratorConfig(Generator obj) throws Exception{
+		String generatorPath = path + "/" + obj.getGeneratorPath();
+		BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(generatorPath), "UTF-8"));
+		String line = null;
+		StringBuffer sb = new StringBuffer();
+		while((line = br.readLine()) != null){
+			if(line.indexOf("<table schema=") > -1){
+				line = obj.getOldTemplate();
+			}
+			sb.append(line).append("\n");
+		}
+		br.close();
+		this.saveDataToFile(sb, generatorPath);
+	}
+	
+	/**
+	 * 保存数据到文件中
+	 * @param sb
+	 * @param path
+	 * @throws Exception
+	 * @author zc.ding
+	 * @date 2016年10月16日
+	 */
+	private void saveDataToFile(StringBuffer sb, String path) throws Exception{
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(path), "UTF-8"));
+		bw.write(sb.toString());
+		bw.flush();
+		bw.close();
 	}
 }
