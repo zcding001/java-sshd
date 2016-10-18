@@ -39,7 +39,7 @@ public class AutomateService {
 	public AutomateService(){
 		iniTool = IniTool.newInstance();
 		path = replaceSeq(System.getProperty("user.dir")) + "/";
-		path = "C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/";
+//		path = "C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/";
 		System.out.println("工作路径：" + path);
 //		filePath = "C:\\yrtz\\test\\automate\\config.ini";
 		filePath = path + "config.ini";
