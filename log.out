@@ -146,3 +146,38 @@
 [DEBUG][2016-08-24 18:25:35,460][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/config.ini】文件中
 [DEBUG][2016-08-24 18:25:35,463][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
 [DEBUG][2016-08-24 18:25:36,412][com.sirding.service.AutomateService]执行的cmd命令:git -C C:/yrtz/git/git_openapi/openapi status --short
+[DEBUG][2017-01-09 16:34:28,032][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-2017/config.ini】文件中加载配置信息
+[DEBUG][2017-01-09 16:34:28,111][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-2017/config.ini】文件中加载配置信息
+[DEBUG][2017-01-09 16:34:28,152][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【C:/yrtz/test/java-sshd-2017/config.ini】文件中
+[DEBUG][2017-01-09 16:34:28,158][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2017-01-09 16:34:29,573][com.sirding.service.AutomateService]执行的cmd命令:git -C C:/yrtz/git/git_temp/yrtz diff-tree -r --name-status --no-commit-id afea7c79b1a076efa72f324d819fa548761bcd17 947595cab0aa8e651fa3fd4b12bc144274b173aa
+[DEBUG][2017-01-09 16:35:13,438][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-2017/config.ini】文件中加载配置信息
+[DEBUG][2017-01-09 16:35:13,467][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-2017/config.ini】文件中加载配置信息
+[DEBUG][2017-01-09 16:35:13,473][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【C:/yrtz/test/java-sshd-2017/config.ini】文件中
+[DEBUG][2017-01-09 16:35:13,477][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2017-01-09 16:35:14,159][com.sirding.service.AutomateService]执行的cmd命令:git -C C:/yrtz/git/git_temp/yrtz diff-tree -r --name-status --no-commit-id afea7c79b1a076efa72f324d819fa548761bcd17 947595cab0aa8e651fa3fd4b12bc144274b173aa
+[DEBUG][2017-01-09 16:35:34,665][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-2017/config.ini】文件中加载配置信息
+[DEBUG][2017-01-09 16:35:34,722][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-2017/config.ini】文件中加载配置信息
+[DEBUG][2017-01-09 16:35:34,730][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【C:/yrtz/test/java-sshd-2017/config.ini】文件中
+[DEBUG][2017-01-09 16:35:34,737][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2017-01-09 16:35:35,672][com.sirding.service.AutomateService]执行的cmd命令:git -C C:/yrtz/git/git_temp/yrtz diff-tree -r --name-status --no-commit-id afea7c79b1a076efa72f324d819fa548761bcd17 947595cab0aa8e651fa3fd4b12bc144274b173aa
+[DEBUG][2017-01-09 16:37:01,473][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-2017/config.ini】文件中加载配置信息
+[DEBUG][2017-01-09 16:37:01,510][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-2017/config.ini】文件中加载配置信息
+[DEBUG][2017-01-09 16:37:01,519][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【C:/yrtz/test/java-sshd-2017/config.ini】文件中
+[DEBUG][2017-01-09 16:37:01,522][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2017-01-09 16:37:02,318][com.sirding.service.AutomateService]执行的cmd命令:git -C C:/yrtz/git/git_temp/yrtz diff-tree -r --name-status --no-commit-id afea7c79b1a076efa72f324d819fa548761bcd17 947595cab0aa8e651fa3fd4b12bc144274b173aa
+[DEBUG][2017-01-09 16:40:48,631][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-2017/config.ini】文件中加载配置信息
+[DEBUG][2017-01-09 16:40:48,663][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-2017/config.ini】文件中加载配置信息
+[DEBUG][2017-01-09 16:40:48,670][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【C:/yrtz/test/java-sshd-2017/config.ini】文件中
+[DEBUG][2017-01-09 16:40:48,673][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2017-01-09 16:40:49,409][com.sirding.service.AutomateService]执行的cmd命令:git -C C:/yrtz/git/git_temp/yrtz diff-tree -r --name-status --no-commit-id afea7c79b1a076efa72f324d819fa548761bcd17 947595cab0aa8e651fa3fd4b12bc144274b173aa
+[DEBUG][2017-01-09 16:47:36,026][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-2017/config.ini】文件中加载配置信息
+[DEBUG][2017-01-09 16:47:36,058][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-2017/config.ini】文件中加载配置信息
+[DEBUG][2017-01-09 16:47:36,076][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【C:/yrtz/test/java-sshd-2017/config.ini】文件中
+[DEBUG][2017-01-09 16:47:36,078][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2017-01-09 16:47:36,948][com.sirding.service.AutomateService]执行的cmd命令:git -C C:/yrtz/git/git_temp/yrtz diff-tree -r --name-status --no-commit-id afea7c79b1a076efa72f324d819fa548761bcd17 947595cab0aa8e651fa3fd4b12bc144274b173aa
+[DEBUG][2017-01-09 16:50:50,819][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-2017/config.ini】文件中加载配置信息
+[DEBUG][2017-01-09 16:50:50,882][com.sirding.service.impl.SecServiceImpl]从【C:/yrtz/test/java-sshd-2017/config.ini】文件中加载配置信息
+[DEBUG][2017-01-09 16:50:50,897][com.sirding.service.impl.SecServiceImpl]配置信息将保存到【C:/yrtz/test/java-sshd-2017/config.ini】文件中
+[DEBUG][2017-01-09 16:50:50,909][com.sirding.service.impl.SecServiceImpl]配置信息已成功保存到文件中......
+[DEBUG][2017-01-09 16:50:51,690][com.sirding.service.AutomateService]执行的cmd命令:git -C C:/yrtz/git/git_temp/yrtz diff-tree -r --name-status --no-commit-id afea7c79b1a076efa72f324d819fa548761bcd17 947595cab0aa8e651fa3fd4b12bc144274b173aa

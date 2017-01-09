@@ -9,7 +9,9 @@ import java.io.FileOutputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import org.apache.log4j.Logger;
 
@@ -40,6 +42,7 @@ public class AutomateService {
 		iniTool = IniTool.newInstance();
 		path = replaceSeq(System.getProperty("user.dir")) + "/";
 //		path = "C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/";
+//		path = "C:/yrtz/test/java-sshd-2017/";
 		System.out.println("工作路径：" + path);
 //		filePath = "C:\\yrtz\\test\\automate\\config.ini";
 		filePath = path + "config.ini";
@@ -130,6 +133,8 @@ public class AutomateService {
 		String projectPath = config.getProjectPath();
 		String commitId = config.getCommitId();
 		StringBuffer sb = new StringBuffer("\n" + "统计更新文件列表" + LogMsg.SEP);
+		List<String> gitList = new ArrayList<String>();
+		gitList.add("需要记录到wiki中的文件列表-start" + LogMsg.SEP);
 		String cmd = "git -C " + projectPath + " " + gitDiff;
 		if(commitId != null && commitId.length() > 0){
 			String[] arr = commitId.split(",");
@@ -148,8 +153,8 @@ public class AutomateService {
 			outter:
 				while((line = br.readLine()) != null){
 					//line eg: M src/main/java/com/qiankundai/web/controller/UserController.java
-					sb.append("git ").append(line);
-					String[] arr = line.trim().split(" +");
+					sb.append("git ").append(line).append("\n");
+					String[] arr = line.trim().split("\\s+");
 					if(arr.length != 2){
 						continue;
 					}
@@ -168,12 +173,18 @@ public class AutomateService {
 					}
 					String srcFile = replaceKey(line, config.getReplaceSrc());
 					String dstFile = replaceKey(line, config.getReplaceDst());
+					gitList.add(dstFile);
 					bw.write(srcFile + FILE_LIST_SEQ + dstFile);
 					bw.write("\n");
 					sb.append(FILE_LIST_SEQ + srcFile + "\n");
 					index++;
 				}
 			bw.write("===========git中更新的文件列表=============END=======\n\n");
+			gitList.add("===========需要记录到wiki中的文件列表-end====================");
+			for(String tmp : gitList){
+				bw.write(tmp);
+				bw.write("\n");
+			}
 			bw.flush();
 			bw.close();
 			if(index == 0){
