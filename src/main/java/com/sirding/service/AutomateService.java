@@ -133,8 +133,8 @@ public class AutomateService {
 		String projectPath = config.getProjectPath();
 		String commitId = config.getCommitId();
 		StringBuffer sb = new StringBuffer("\n" + "统计更新文件列表" + LogMsg.SEP);
-		List<String> gitList = new ArrayList<String>();
-		gitList.add("需要记录到wiki中的文件列表-start" + LogMsg.SEP);
+//		List<String> gitList = new ArrayList<String>();
+//		gitList.add("需要记录到wiki中的文件列表-start" + LogMsg.SEP);
 		String cmd = "git -C " + projectPath + " " + gitDiff;
 		if(commitId != null && commitId.length() > 0){
 			String[] arr = commitId.split(",");
@@ -173,18 +173,18 @@ public class AutomateService {
 					}
 					String srcFile = replaceKey(line, config.getReplaceSrc());
 					String dstFile = replaceKey(line, config.getReplaceDst());
-					gitList.add(dstFile);
+//					gitList.add(dstFile);
 					bw.write(srcFile + FILE_LIST_SEQ + dstFile);
 					bw.write("\n");
 					sb.append(FILE_LIST_SEQ + srcFile + "\n");
 					index++;
 				}
 			bw.write("===========git中更新的文件列表=============END=======\n\n");
-			gitList.add("===========需要记录到wiki中的文件列表-end====================");
-			for(String tmp : gitList){
-				bw.write(tmp);
-				bw.write("\n");
-			}
+//			gitList.add("===========需要记录到wiki中的文件列表-end====================");
+//			for(String tmp : gitList){
+//				bw.write(tmp);
+//				bw.write("\n");
+//			}
 			bw.flush();
 			bw.close();
 			if(index == 0){
