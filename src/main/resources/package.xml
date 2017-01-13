@@ -31,11 +31,22 @@
           
         <!-- 把项目的配置文件，打包进zip文件的config目录 -->  
         <fileSet>  
-            <directory>${project.basedir}\src\main\config</directory>  
-            <outputDirectory>config</outputDirectory>  
+            <directory>${project.basedir}\src\main\resources</directory>  
+            <outputDirectory>/</outputDirectory>  
             <includes>  
                 <include>*.xml</include>  
                 <include>*.properties</include>  
+                <include>*.ini*</include>  
+            </includes>  
+        </fileSet>
+        
+        <fileSet>  
+            <directory>${project.basedir}\src\test\resources</directory>  
+            <outputDirectory>/</outputDirectory>  
+            <includes>  
+                <include>*.xml</include>  
+                <include>*.properties</include> 
+                <include>*.ini*</include> 
             </includes>  
         </fileSet>  
           
