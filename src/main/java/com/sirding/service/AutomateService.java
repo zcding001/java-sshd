@@ -22,6 +22,10 @@ import com.sirding.util.SftpUtil;
 
 public class AutomateService {
 	private static final String FILE_LIST_SEQ = "<=####=>";
+	private static final String UPLOAD_LIST = "UPLOAD_LIST";
+	private static final String START = "START";
+	private static final String END = "END";
+	
 	private String path = "";
 	private String rootPath = "";
 	private String uploadPath = "";
@@ -131,8 +135,6 @@ public class AutomateService {
 		String projectPath = config.getProjectPath();
 		String commitId = config.getCommitId();
 		StringBuffer sb = new StringBuffer("\n" + "统计更新文件列表" + LogMsg.SEP);
-//		List<String> gitList = new ArrayList<String>();
-//		gitList.add("需要记录到wiki中的文件列表-start" + LogMsg.SEP);
 		String cmd = "git -C " + projectPath + " " + gitDiff;
 		if(commitId != null && commitId.length() > 0){
 			String[] arr = commitId.split(",");
@@ -151,7 +153,7 @@ public class AutomateService {
 			outter:
 				while((line = br.readLine()) != null){
 					//line eg: M src/main/java/com/qiankundai/web/controller/UserController.java
-					sb.append("git ").append(line).append("\n");
+					sb.append("git ").append(line);
 					String[] arr = line.trim().split("\\s+");
 					if(arr.length != 2){
 						continue;
@@ -171,18 +173,12 @@ public class AutomateService {
 					}
 					String srcFile = replaceKey(line, config.getReplaceSrc());
 					String dstFile = replaceKey(line, config.getReplaceDst());
-//					gitList.add(dstFile);
 					bw.write(srcFile + FILE_LIST_SEQ + dstFile);
 					bw.write("\n");
 					sb.append(FILE_LIST_SEQ + srcFile + "\n");
 					index++;
 				}
 			bw.write("===========git中更新的文件列表=============END=======\n\n");
-//			gitList.add("===========需要记录到wiki中的文件列表-end====================");
-//			for(String tmp : gitList){
-//				bw.write(tmp);
-//				bw.write("\n");
-//			}
 			bw.flush();
 			bw.close();
 			if(index == 0){
@@ -271,9 +267,9 @@ public class AutomateService {
 			br.close();
 			//生成用于升级的文件列表
 			BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(fileListPath, true), "UTF-8"));
-			bw.write("===========用于升级的文件列表============START=================\n");
+			bw.write("===" + UPLOAD_LIST + "========用于升级的文件列表============" + START + "=================\n");
 			bw.write(sb2.toString().replaceAll(uploadPath, ""));
-			bw.write("===========用于升级的文件列表============END=================\n");
+			bw.write("===" + UPLOAD_LIST + "========用于升级的文件列表============" + END + "=================\n");
 			bw.flush();
 			bw.close();
 		} catch (Exception e) {
@@ -324,22 +320,32 @@ public class AutomateService {
 		try {
 			BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(fileListPath))); 
 			String line = null;
+			boolean start = false;
 			while((line = br.readLine()) != null){
 				String src = "";
 				String dst = "";
-				if(!line.startsWith("/")){
-					src = remoteTomcatPath + "/" + line;
-					dst = downloadPath + "/" + line;
-				}else{
-					src = remoteTomcatPath + line;
-					dst = downloadPath + line;
-				}
-				if(src.endsWith("\\\\") || src.endsWith("/")){
+				if(line.indexOf(UPLOAD_LIST) > -1 && line.indexOf(START) > -1){
+					start = true;
 					continue;
 				}
-				SftpUtil.download(src, dst);
-				//记录下载文件的列表
-				sb.append(src + "    ===download==>   " + dst + "\n");
+				if(line.indexOf(UPLOAD_LIST) > -1 && line.indexOf(END) > -1){
+					break;
+				}
+				if(start){
+					if(!line.startsWith("/")){
+						src = remoteTomcatPath + "/" + line;
+						dst = downloadPath + "/" + line;
+					}else{
+						src = remoteTomcatPath + line;
+						dst = downloadPath + line;
+					}
+					if(src.endsWith("\\\\") || src.endsWith("/")){
+						continue;
+					}
+					SftpUtil.download(src, dst);
+					//记录下载文件的列表
+					sb.append(src + "    ===download==>   " + dst + "\n");
+				}
 			}
 			br.close();
 		} catch (Exception e) {
