@@ -10,6 +10,8 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.apache.log4j.Logger;
 
@@ -362,12 +364,18 @@ public class AutomateService {
 	 * @author zc.ding
 	 */
 	public String uploadOper(Config config){
+//		用于统计传输文件的数量
+		Map<String, Integer> map = new HashMap<String, Integer>();
 		File file = new File(uploadPath);
 		String remoteTomcatPath = config.getRemoteTomcatPath();
 		StringBuffer sb = new StringBuffer("\n已上传至服务器的文件列表" + LogMsg.SEP);
-		recursion(file, remoteTomcatPath, sb);
+		recursion(file, remoteTomcatPath, sb, map);
 		//将sb写入到log.txt文件中
 		LogMsg.saveMsg(sb.toString());
+//		显示上传文件的统计结果
+		for(String key : map.keySet()){
+			System.out.println("共上传[" + key + "]文件[" + map.get(key) + "]");
+		}
 		return "";
 	}
 
@@ -379,20 +387,31 @@ public class AutomateService {
 	 * @date 2016年7月8日
 	 * @author zc.ding
 	 */
-	private void recursion(File file, String remoteTomcatPath, StringBuffer sb){
+	private void recursion(File file, String remoteTomcatPath, StringBuffer sb, Map<String, Integer> map){
 		File[] files = file.listFiles();
 		if(files != null){
 			for(File tmp : files){
 				if(tmp.isDirectory()){
-					recursion(tmp, remoteTomcatPath, sb);
+					recursion(tmp, remoteTomcatPath, sb, map);
 				}else{
 					String src = replaceSeq(tmp.getAbsolutePath());
+					if(src != null && src.lastIndexOf(".") > -1){
+						String suffix = src.substring(src.lastIndexOf("."), src.length());
+						Integer count = map.get(suffix);
+						if(count == null){
+							count = new Integer(0);
+						}
+						count++;
+						map.put(suffix, count);
+					}
 					String dst = src.replaceAll(replaceSeq(uploadPath), replaceSeq(remoteTomcatPath));
 					try {
 						SftpUtil.upload(src, dst);
 						sb.append("ok\t" + src + " ==> " + dst).append("\n");
+//						System.out.println("ok\t" + src + " ==> " + dst + "\n");
 					} catch (Exception e) {
 						sb.append("fail\t" + src + " ==> " + dst).append("\n");
+//						System.out.println("fail\t" + src + " ==> " + dst + "\n");
 						e.printStackTrace();
 					}
 				}
