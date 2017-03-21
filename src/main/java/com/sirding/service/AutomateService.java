@@ -229,7 +229,7 @@ public class AutomateService {
 	 * @date 2016年7月8日
 	 * @author zc.ding
 	 */
-	public void initUploadFiles(Config config){
+	public String initUploadFiles(Config config){
 		LogMsg.saveMsg("\n" + "准备要更新的文件" + LogMsg.SEP);
 		StringBuffer sb = new StringBuffer();
 		StringBuffer sb2 = new StringBuffer();
@@ -278,6 +278,7 @@ public class AutomateService {
 			e.printStackTrace();
 		}
 		LogMsg.saveMsg(sb.toString());
+		return sb2.toString();
 	}
 	
 	/**

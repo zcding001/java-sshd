@@ -32,6 +32,19 @@ public class GlobalConfig {
 	@Option(key = "auto_update_index")
 	private String autoUpdateIndex;
 	
+	@Option(key = "email_userName")
+	private String emailUserName;
+	@Option(key = "email_pwd")
+	private String emailPwd;
+	@Option(key = "email_host")
+	private String emailHost;
+	@Option(key = "from_email")
+	private String fromEmail;
+	@Option(key = "to_email")
+	private String toEmail;
+	@Option(key = "cc_email")
+	private String ccEmail;
+	
 	public String getSecName() {
 		return secName;
 	}
@@ -97,5 +110,41 @@ public class GlobalConfig {
 	}
 	public void setAutoUpdateIndex(String autoUpdateIndex) {
 		this.autoUpdateIndex = autoUpdateIndex;
+	}
+	public String getFromEmail() {
+		return fromEmail;
+	}
+	public void setFromEmail(String fromEmail) {
+		this.fromEmail = fromEmail;
+	}
+	public String getToEmail() {
+		return toEmail;
+	}
+	public void setToEmail(String toEmail) {
+		this.toEmail = toEmail;
+	}
+	public String getCcEmail() {
+		return ccEmail;
+	}
+	public void setCcEmail(String ccEmail) {
+		this.ccEmail = ccEmail;
+	}
+	public String getEmailUserName() {
+		return emailUserName;
+	}
+	public void setEmailUserName(String emailUserName) {
+		this.emailUserName = emailUserName;
+	}
+	public String getEmailPwd() {
+		return emailPwd;
+	}
+	public void setEmailPwd(String emailPwd) {
+		this.emailPwd = emailPwd;
+	}
+	public String getEmailHost() {
+		return emailHost;
+	}
+	public void setEmailHost(String emailHost) {
+		this.emailHost = emailHost;
 	}
 }
