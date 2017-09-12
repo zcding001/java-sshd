@@ -5,7 +5,7 @@ user_name = develop
 pwd = yrSuper001
 private_key = 
 passphrase = 
-run_sec = hkjf
+run_sec = tomcat1
 index = 2
 date = 20160708
 auto_update_index = 0
@@ -26,15 +26,6 @@ project_path = C:/yrtz/git/github/demo-web
 replace_src = src/java|src/resources_/WEB-INF/classes,src/main/resources|src/main/java_/WEB-INF/classes,src/_/WEB-INF/classes/,WebRoot/_/
 replace_dst = src/java|src/resources_/WEB-INF/classes,src/main/resources|src/main/java_/WEB-INF/classes,src/_/WEB-INF/classes/,WebRoot/_/
 black_key_pattern =
-commit_id = 
-
-[hkjf]
-remote_tomcat_path = /data/www/tomcat-lianlian-6.0.43-LOCALTEST1/webapps/hkjf
-local_tomcat_path = C:/yrtz/tools/TOMCAT/apache-tomcat-6.0.43/webapps/yrtz
-project_path = C:/yrtz/git/git_yrtz/yrtz
-replace_src = src/java|src/resources|src/source_/WEB-INF/classes,src/main/resources|src/main/java_/,src/_/,WebRoot/_/
-replace_dst = src/java|src/resources|src/source_/WEB-INF/classes,src/main/resources|src/main/java_/WEB-INF/classes,src/_/WEB-INF/classes/,WebRoot/_/
-black_key_pattern = important.properties
 commit_id = 
 
 

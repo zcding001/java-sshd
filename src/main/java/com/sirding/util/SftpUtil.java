@@ -99,7 +99,8 @@ public class SftpUtil {
 	 */
 	public static void upload(String srcFile, String dstFile) throws Exception {
 		File file = new File(dstFile);
-		exec("mkdir -p " + file.getParent());
+//		exec("mkdir -p " + file.getParent());
+		SftpUtil.mkdirMultiPath(file.getParent());
 		sftp.put(srcFile, dstFile);
 	}
 
@@ -185,7 +186,7 @@ public class SftpUtil {
 	 * @author zc.ding
 	 * @date 2016年7月7日
 	 */
-	public boolean isDirExist(String directory) throws Exception {
+	public static boolean isDirExist(String directory) throws Exception {
 		boolean isDirExistFlag = false;
 		try {
 			SftpATTRS sftpATTRS = sftp.lstat(directory);
@@ -196,6 +197,32 @@ public class SftpUtil {
 			}
 		}
 		return isDirExistFlag;
+	}
+	
+	/**
+	 *  @Description    : 创建远程服务器路径
+	 *  @Method_Name    : createPath
+	 *  @param path
+	 *  @throws Exception
+	 *  @return         : void
+	 *  @Creation Date  : 2017年9月12日 下午2:31:17 
+	 *  @Author         : zhichaoding@hongkun.com zc.ding
+	 */
+	public static void mkdirMultiPath(String path) throws Exception{
+		String[] pathArr = path.replaceAll("\\\\", "/").split("/");
+		StringBuilder sb = new StringBuilder("/");
+		if(pathArr != null){
+			for(String tmp : pathArr){
+				if(tmp == null || tmp.length() <= 0){
+					continue;
+				}
+				sb.append(tmp).append("/");
+				if(!isDirExist(sb.toString())){
+					sftp.mkdir(sb.toString());
+				}
+				sftp.cd(sb.toString());
+			}
+		}
 	}
 
 	public static void exec(String cmd){

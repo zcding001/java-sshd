@@ -45,7 +45,6 @@ public class AutomateService {
 	public AutomateService(){
 		iniTool = IniTool.newInstance();
 		path = replaceSeq(System.getProperty("user.dir")) + "/";
-//		path = "C:/yrtz/test/java-sshd-0.0.1-SNAPSHOT-bin/";
 //		path = "C:/yrtz/test/java-sshd-2017/";
 		System.out.println("工作路径：" + path);
 //		filePath = "C:\\yrtz\\test\\automate\\config.ini";
@@ -409,10 +408,10 @@ public class AutomateService {
 					try {
 						SftpUtil.upload(src, dst);
 						sb.append("ok\t" + src + " ==> " + dst).append("\n");
-//						System.out.println("ok\t" + src + " ==> " + dst + "\n");
+						System.out.println("ok\t" + src + " ==> " + dst + "\n");
 					} catch (Exception e) {
 						sb.append("fail\t" + src + " ==> " + dst).append("\n");
-//						System.out.println("fail\t" + src + " ==> " + dst + "\n");
+						System.out.println("fail\t" + src + " ==> " + dst + "\n");
 						e.printStackTrace();
 					}
 				}
