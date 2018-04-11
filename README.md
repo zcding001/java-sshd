@@ -45,6 +45,6 @@ project_path					：git项目的绝对地址
 replace_src						：源文件替换规则
 replace_dst						：目标路径替换规则
 black_key_pattern			：黑名单列表(多个文件已,分割)，即使文件有更新也不更新到远程服务器上
-commit_id							：git两个节点id，中间用","分割
+commit_id				：git两个commitId，中间用","分割，如果配置一个commitId，那么取值范围是当前commitId和最新提交的commitId节点
 
 
