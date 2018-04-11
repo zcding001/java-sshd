@@ -15,6 +15,7 @@ import com.sirding.util.SftpUtil;
 public class Automate {
 	
 	public static void main(String[] args) {
+//		args = new String[]{"git", "git"};
 		try {
 			if(args != null && args.length >= 1){
 				String funs = args[0];

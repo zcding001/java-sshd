@@ -1,26 +1,18 @@
 package com.sirding.service;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
-
-import org.apache.log4j.Logger;
-
 import com.sirding.model.Config;
 import com.sirding.model.Generator;
 import com.sirding.model.GlobalConfig;
 import com.sirding.singleton.IniTool;
 import com.sirding.util.FileUtil;
 import com.sirding.util.SftpUtil;
+import org.apache.log4j.Logger;
+
+import java.io.*;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 public class AutomateService {
 	private static final String FILE_LIST_SEQ = "<=####=>";
@@ -45,9 +37,8 @@ public class AutomateService {
 	public AutomateService(){
 		iniTool = IniTool.newInstance();
 		path = replaceSeq(System.getProperty("user.dir")) + "/";
-//		path = "C:/yrtz/test/java-sshd-2017/";
 		System.out.println("工作路径：" + path);
-//		filePath = "C:\\yrtz\\test\\automate\\config.ini";
+//		filePath = "D:\\\\hkjf\\\\tools\\\\java-sshd\\\\config.ini";
 		filePath = path + "config.ini";
 	}
 	
@@ -125,13 +116,12 @@ public class AutomateService {
 	}
 
 	/**
-	 * 获得更新的文件列表
-	 * @param projectPath
-	 * @param commitId
-	 * @return
-	 * @date 2016年7月7日
-	 * @author zc.ding
-	 */
+	* @Description TODO
+	* @param [gconfig, config]
+	* @author zc.ding
+	* @date 2018/4/10
+	* @return void
+	**/
 	public void getOptionFileInfo(GlobalConfig gconfig, Config config) {
 		String projectPath = config.getProjectPath();
 		String commitId = config.getCommitId();
@@ -139,7 +129,29 @@ public class AutomateService {
 		String cmd = "git -C " + projectPath + " " + gitDiff;
 		if(commitId != null && commitId.length() > 0){
 			String[] arr = commitId.split(",");
-			cmd = "git -C " + projectPath + " " + gitDiffCommitId.replaceAll("SHA1", arr[0]).replaceAll("SHA2", arr[1]);
+			if(arr.length == 1){
+				cmd = "git -C " + projectPath + " rev-parse HEAD";
+				Runtime run = Runtime.getRuntime();//返回与当前 Java 应用程序相关的运行时对象
+				logger.debug("执行的cmd命令:" + cmd);
+				sb.append(cmd + "\n");
+				try {
+					Process p = run.exec(cmd);// 启动另一个进程来执行命令
+					BufferedReader br = new BufferedReader(new InputStreamReader(new BufferedInputStream(p.getInputStream())));
+					String line = null;
+					while((line = br.readLine()) != null){
+						if(line.trim().matches("[0-9a-z]{40}")){
+							cmd = "git -C " + projectPath + " " + gitDiffCommitId.replaceAll("SHA1", arr[0]).replaceAll("SHA2", line);
+							break;
+						}
+					}
+				}catch (Exception e){
+					e.printStackTrace();
+				}
+			}else if(arr.length == 2){
+				cmd = "git -C " + projectPath + " " + gitDiffCommitId.replaceAll("SHA1", arr[0]).replaceAll("SHA2", arr[1]);
+			}else{
+				return;
+			}
 		}
 		try {
 			Runtime run = Runtime.getRuntime();//返回与当前 Java 应用程序相关的运行时对象 
@@ -437,7 +449,6 @@ public class AutomateService {
 	}
 	
 	/**
-	 * 
 	 * @param filePath
 	 * @return
 	 * @date 2016年8月4日

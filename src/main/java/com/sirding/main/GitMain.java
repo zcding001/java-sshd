@@ -1,13 +1,13 @@
 package com.sirding.main;
 
-import java.util.Scanner;
-
 import com.sirding.model.Config;
 import com.sirding.model.GlobalConfig;
 import com.sirding.service.AutomateService;
 import com.sirding.service.LogMsg;
 import com.sirding.util.SftpUtil;
 import com.sirding.util.mail.MailUtil;
+
+import java.util.Scanner;
 
 public class GitMain {
 

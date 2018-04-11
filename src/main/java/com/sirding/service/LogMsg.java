@@ -1,13 +1,12 @@
 package com.sirding.service;
 
+import com.sirding.model.Config;
+import com.sirding.model.GlobalConfig;
+import org.apache.log4j.Logger;
+
 import java.io.BufferedWriter;
 import java.io.FileOutputStream;
 import java.io.OutputStreamWriter;
-
-import org.apache.log4j.Logger;
-
-import com.sirding.model.Config;
-import com.sirding.model.GlobalConfig;
 
 public class LogMsg {
 

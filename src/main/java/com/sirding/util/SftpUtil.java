@@ -1,18 +1,10 @@
 package com.sirding.util;
 
+import com.jcraft.jsch.*;
+import com.sirding.service.LogMsg;
+
 import java.io.File;
 import java.util.Properties;
-
-
-
-
-import com.jcraft.jsch.Channel;
-import com.jcraft.jsch.ChannelExec;
-import com.jcraft.jsch.ChannelSftp;
-import com.jcraft.jsch.JSch;
-import com.jcraft.jsch.Session;
-import com.jcraft.jsch.SftpATTRS;
-import com.sirding.service.LogMsg;
 
 /**
  * 连接sshd的工具类

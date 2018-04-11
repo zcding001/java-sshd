@@ -1,26 +1,13 @@
 package com.sirding.util.mail;
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Properties;
+import org.apache.log4j.Logger;
 
 import javax.activation.DataHandler;
-import javax.mail.Authenticator;
-import javax.mail.BodyPart;
-import javax.mail.Message;
-import javax.mail.PasswordAuthentication;
-import javax.mail.Session;
+import javax.mail.*;
 import javax.mail.Message.RecipientType;
-import javax.mail.internet.AddressException;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeBodyPart;
-import javax.mail.internet.MimeMessage;
-import javax.mail.internet.MimeMultipart;
+import javax.mail.internet.*;
 import javax.mail.util.ByteArrayDataSource;
-
-import org.apache.log4j.Logger;
+import java.util.*;
 
 /**
  * @Described	: 邮件工具类

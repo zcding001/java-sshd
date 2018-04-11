@@ -1,18 +1,17 @@
 package com.sirding.ini;
 
 
-import java.io.BufferedInputStream;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-
-import org.apache.log4j.Logger;
-import org.junit.BeforeClass;
-import org.junit.Test;
-
 import com.sirding.model.Config;
 import com.sirding.model.GlobalConfig;
 import com.sirding.service.AutomateService;
 import com.sirding.singleton.IniTool;
+import org.apache.log4j.Logger;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
 
 public class ConfigTest {
